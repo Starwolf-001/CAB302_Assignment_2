@@ -33,7 +33,7 @@ public class DriverDeliveryCustomer extends Customer {
 	 */
 	public DriverDeliveryCustomer(String name, String mobileNumber, int locationX, int locationY) throws CustomerException {
 		
-		super(name, mobileNumber, locationX, locationY);
+		super(name, mobileNumber, locationX, locationY, "driver delivery");
 		
 		if(customerName == "" || customerName == null) {
 			throw new CustomerException("customerName is an empty string or is null");
