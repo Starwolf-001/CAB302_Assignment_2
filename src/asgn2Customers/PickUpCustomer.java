@@ -27,7 +27,7 @@ public class PickUpCustomer extends Customer {
 	 * 
 	 */
 	public PickUpCustomer(String name, String mobileNumber, int locationX,  int locationY) throws CustomerException {
-		// TO DO	
+		// TODO extends customer	
 	}
 
 	/**

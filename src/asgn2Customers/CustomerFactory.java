@@ -28,6 +28,8 @@ public class CustomerFactory {
 	 * @throws CustomerException if the customerCode is not one of the three valid codes listed in Section 5.3 of the Assignment Specification. 
 	 */
 	public static Customer getCustomer(String customerCode, String name, String mobileNumber, int locationX,  int locationY) throws CustomerException{
-		// TO DO
+		// TODO What are valid customer codes
+		
+		// TODO throw CustomerException when an invalid customer code is identified
 	}
 }

@@ -11,6 +11,10 @@ import asgn2Exceptions.CustomerException;
  *
  */
 public class DriverDeliveryCustomer extends Customer {
+	private String customerName;
+	private String customerMobileNumber;
+	private int customerLocationX;
+	private int customerLocationY;
 
 	/**
 	 *  This class represents a customer of the Pizza Palace restaurant that has chosen to have their pizza delivered by 
@@ -28,7 +32,26 @@ public class DriverDeliveryCustomer extends Customer {
 	 * 
 	 */
 	public DriverDeliveryCustomer(String name, String mobileNumber, int locationX, int locationY) throws CustomerException {
-		// TO DO
+		// TODO Fix this problem, extend customer
+		this.customerName = name;
+		this.customerMobileNumber = mobileNumber;
+		this.customerLocationX = locationX;
+		this.customerLocationY = locationY;
+		
+		if(customerName == "" || customerName == null) {
+			throw new CustomerException("customerName is an empty string or is null");
+		}
+		if(customerMobileNumber == "" || customerMobileNumber == null) {
+			throw new CustomerException("customerMobileNumber is an empty string or is null");
+		}
+		// TODO Further look at location, can it have negative values?
+		// TODO Is there a maximum distance of blocks? etc
+		if(customerLocationX <= 0) {
+			throw new CustomerException("customerLocationX is either 0 or has a negative value");
+		}
+		if(customerLocationY <= 0) {
+			throw new CustomerException("customerLocationY is either 0 or has a negative value");
+		}
 	}
 	
 	/**

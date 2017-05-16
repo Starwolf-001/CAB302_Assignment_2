@@ -11,7 +11,12 @@ import asgn2Exceptions.CustomerException;
  * @author Person B
 */
 public abstract class Customer {
-
+	
+	private String customerName;
+	private String customerMobileNumber;
+	private int customerLocationX;
+	private int customerLocationY;
+	private String customerType;
 
 	/**
 	 *  This class represents a customer of the Pizza Palace restaurant.  A detailed description of the class's fields
@@ -31,7 +36,29 @@ public abstract class Customer {
 	 * 
 	 */
 	public Customer(String name, String mobileNumber, int locationX, int locationY, String type) throws CustomerException{
-		// TO DO
+		this.customerName = name;
+		this.customerMobileNumber = mobileNumber;
+		this.customerLocationX = locationX;
+		this.customerLocationY = locationY;
+		this.customerType = type;
+		
+		if(customerName == "" || customerName == null) {
+			throw new CustomerException("customerName is an empty string or is null");
+		}
+		if(customerMobileNumber == "" || customerMobileNumber == null) {
+			throw new CustomerException("customerMobileNumber is an empty string or is null");
+		}
+		// TODO Further look at location, can it have negative values?
+		// TODO Is there a maximum distance of blocks? etc
+		if(customerLocationX <= 0) {
+			throw new CustomerException("customerLocationX is either 0 or has a negative value");
+		}
+		if(customerLocationY <= 0) {
+			throw new CustomerException("customerLocationY is either 0 or has a negative value");
+		}
+		if(customerType == "" || customerType == null) {
+			throw new CustomerException("customerType is an empty string or is null");
+		}
 	}
 	
 	/**
@@ -39,7 +66,7 @@ public abstract class Customer {
 	 * @return The Customer's name.
 	 */
 	public final String getName(){
-		// TO DO
+		return customerName;
 	}
 	
 	/**
@@ -47,7 +74,7 @@ public abstract class Customer {
 	 * @return The Customer's mobile number.
 	 */
 	public final String getMobileNumber(){
-		// TO DO
+		return customerMobileNumber;
 	}
 
 	/**
@@ -56,7 +83,7 @@ public abstract class Customer {
 	 * @return A human understandable description of the Customer's type.
 	 */
 	public final String getCustomerType(){
-		// TO DO
+		return customerType;
 	}
 	
 	/**
@@ -65,7 +92,7 @@ public abstract class Customer {
 	 * @return The Customer's X location
 	 */
 	public final int getLocationX(){
-		// TO DO
+		return customerLocationX;
 	}
 
 	/**
@@ -74,7 +101,7 @@ public abstract class Customer {
 	 * @return The Customer's Y location
 	 */
 	public final int getLocationY(){
-		// TO DO
+		return customerLocationY;
 	}
 
 	/**
@@ -83,8 +110,6 @@ public abstract class Customer {
 	 * @return The distance between the restaurant and the Customer depending on the mode of delivery.
 	 */
 	public abstract double getDeliveryDistance();
-
-	
 	
 	/**
 	 * Compares *this* Customer object with an instance of an *other* Customer object and returns true if  
