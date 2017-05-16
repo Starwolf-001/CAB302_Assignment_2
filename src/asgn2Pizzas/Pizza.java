@@ -2,6 +2,9 @@ package asgn2Pizzas;
 
 import java.time.LocalTime;
 
+import asgn2Exceptions.CustomerException;
+import asgn2Exceptions.PizzaException;
+
 
 /**
  * An abstract class that represents pizzas sold at the Pizza Palace restaurant. 
@@ -9,10 +12,16 @@ import java.time.LocalTime;
  * Each of these subclasses have a different set of toppings. A description of the class's fields
  * and their constraints is provided in Section 5.1 of the Assignment Specification. 
  * 
- * @author Person A
+ * @author Michael Cartwright
  *
  */
 public abstract class Pizza  {
+	
+	private int pizzaQuantity;
+	private LocalTime pizzaOrderTime;
+	private LocalTime pizzaDeliveryTime;
+	private String pizzaType;
+	private Double pizzaPrice;
 	
 	/**
 	 *  This class represents a pizza produced at the Pizza Palace restaurant.  A detailed description of the class's fields
@@ -32,7 +41,30 @@ public abstract class Pizza  {
 	 * 
 	 */
 	public Pizza(int quantity, LocalTime orderTime, LocalTime deliveryTime, String type, double price) throws PizzaException{
-		// TO DO	
+		this.pizzaQuantity = quantity;
+		this.pizzaOrderTime = orderTime;
+		this.pizzaDeliveryTime = deliveryTime;
+		this.pizzaType = type;
+		this.pizzaPrice = price;
+		
+		// TODO Can a pizza quantity be 0?
+		if(pizzaQuantity < 0) {
+			throw new PizzaException("Pizza quantity cannot be less than 0.");
+		}
+		// TODO need to further investigate and test LocalTime conditions
+		if(pizzaOrderTime == null) {
+			throw new PizzaException("Order time cannot be NULL.");
+		}
+		// TODO need to further investigate and test LocalTime conditions
+		if(pizzaDeliveryTime == null) {
+			throw new PizzaException("Delivery Time cannot be NULL.");
+		}
+		if(pizzaType == "" || pizzaType == null) {
+			throw new PizzaException("Pizza type cannot be an empty string or NULL.");
+		}
+		if(pizzaPrice < 0) {
+			throw new PizzaException("Pizza quantity cannot be less than $0.00.");
+		}
 	}
 
 	/**
@@ -42,7 +74,7 @@ public abstract class Pizza  {
 	 * <P> POST: The cost field is set to sum of the Pizzas's toppings
 	 */
 	public final void calculateCostPerPizza(){
-		// TO DO
+		// TODO How much does each pizza cost to make? [1]
 	}
 	
 	/**
@@ -50,7 +82,7 @@ public abstract class Pizza  {
 	 * @return The amount that an individual pizza costs to make.
 	 */
 	public final double getCostPerPizza(){
-		// TO DO
+		// TODO How much does each pizza cost to make? [1]
 	}
 
 	/**
@@ -58,7 +90,7 @@ public abstract class Pizza  {
 	 * @return The amount that an individual pizza is sold to the customer.
 	 */
 	public final double getPricePerPizza(){
-		// TO DO
+		return pizzaPrice;
 	}
 
 	/**
@@ -66,7 +98,7 @@ public abstract class Pizza  {
 	 * @return The amount that the entire order costs to make, taking into account the type and quantity of pizzas. 
 	 */
 	public final double getOrderCost(){
-		// TO DO
+		// TODO How much does each pizza cost to make? [1]
 	}
 	
 	/**
@@ -74,7 +106,14 @@ public abstract class Pizza  {
 	 * @return The amount that the entire order is sold to the customer, taking into account the type and quantity of pizzas. 
 	 */
 	public final double getOrderPrice(){
-		// TO DO
+		// TODO foreach pizza the price times the quantity
+		//      Sum of total foreach pizza
+		//      Sum of combined total
+		
+		// double currentPizzaPrice = pizza.getPricePerPizza();
+		// int currentPizzaQuantity = pizza.getQuantity();
+		// double total = currentPizzaPrice * currentPizzaQuantity;
+		// totalCombinedPrice = currentPizza.total + otherPizza.total;
 	}
 	
 	
@@ -83,7 +122,8 @@ public abstract class Pizza  {
 	 * @return  Returns the profit made by the restaurant on the order which is the order price minus the order cost.
 	 */
 	public final double getOrderProfit(){
-		// TO DO
+		// TODO What is the profit per pizza?
+		//      Does profit change with different quantity ratios?
 	}
 	
 
@@ -93,7 +133,7 @@ public abstract class Pizza  {
 	 * @return Returns  true if the instance of Pizza contains the specified topping and false otherwise.
 	 */
 	public final boolean containsTopping(PizzaTopping topping){
-		// TO DO
+		// TODO
 	}
 	
 	/**
@@ -101,7 +141,7 @@ public abstract class Pizza  {
 	 * @return the quantity of pizzas ordered. 
 	 */
 	public final int getQuantity(){
-		// TO DO
+		return pizzaQuantity;
 	}
 
 	/**
@@ -110,7 +150,7 @@ public abstract class Pizza  {
 	 * @return A human understandable description of the Pizza's type.
 	 */
 	public final String getPizzaType(){
-		// TO DO
+		return pizzaType;
 	}
 
 

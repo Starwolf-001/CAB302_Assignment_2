@@ -3,7 +3,7 @@
 *  There are three types of customers (described in Section 5.2 in the Assignment Specification) represented by three concrete classes 
 *  which inherit from a single abstract Customer class. This package is detailed in Section 7.1 of the Assignment Specification.
 *  
- * @author Person B
+ * @author Michael Cartwright
  *
  */
 package asgn2Customers;

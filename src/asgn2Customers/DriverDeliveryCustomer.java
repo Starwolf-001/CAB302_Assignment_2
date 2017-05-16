@@ -7,7 +7,7 @@ import asgn2Exceptions.CustomerException;
  * Distance between the customer and the restaurant. A description of the class's
  * fields and their constraints is provided in Section 5.2 of the Assignment Specification.
  * 
- * @author Person B
+ * @author Michael Cartwright
  *
  */
 public class DriverDeliveryCustomer extends Customer {
@@ -32,11 +32,8 @@ public class DriverDeliveryCustomer extends Customer {
 	 * 
 	 */
 	public DriverDeliveryCustomer(String name, String mobileNumber, int locationX, int locationY) throws CustomerException {
-		// TODO Fix this problem, extend customer
-		this.customerName = name;
-		this.customerMobileNumber = mobileNumber;
-		this.customerLocationX = locationX;
-		this.customerLocationY = locationY;
+		
+		super(name, mobileNumber, locationX, locationY);
 		
 		if(customerName == "" || customerName == null) {
 			throw new CustomerException("customerName is an empty string or is null");
