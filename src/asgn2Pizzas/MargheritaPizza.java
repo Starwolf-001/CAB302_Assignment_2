@@ -12,11 +12,14 @@ import asgn2Exceptions.PizzaException;
  *  The margherita pizza has certain toppings listed in Section 5.1 of the Assignment Specification Document.  
  *  A description of the class's fields and their constraints is provided in Section 5.1 of the Assignment Specification.
  * 
- * @author Person A
+ * @author Michael Cartwright
  *
  */
 public class MargheritaPizza extends Pizza {
-
+	
+	private int pizzaQuantity;
+	private LocalTime pizzaOrderTime;
+	private LocalTime pizzaDeliveryTime;
 	
 	/**
 	 * 
@@ -35,7 +38,21 @@ public class MargheritaPizza extends Pizza {
 	 *
 	 */
 	public MargheritaPizza(int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException {
-		// TO DO
+		// TODO Cost of pizza needs to be done properly
+		super(quantity, orderTime, deliveryTime, "margherita", 5.00);
+		
+		// TODO Can a pizza quantity be 0?
+		if(pizzaQuantity < 0) {
+			throw new PizzaException("Pizza quantity cannot be less than 0.");
+		}
+		// TODO need to further investigate and test LocalTime conditions
+		if(pizzaOrderTime == null) {
+			throw new PizzaException("Order time cannot be NULL.");
+		}
+		// TODO need to further investigate and test LocalTime conditions
+		if(pizzaDeliveryTime == null) {
+			throw new PizzaException("Delivery Time cannot be NULL.");
+		}
 	}
 
 }
