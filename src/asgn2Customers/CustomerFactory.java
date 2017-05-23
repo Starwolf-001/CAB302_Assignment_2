@@ -1,7 +1,10 @@
 package asgn2Customers;
 
 
+import java.time.LocalTime;
+
 import asgn2Exceptions.CustomerException;
+import asgn2Exceptions.PizzaException;
 
 /**
  * A class that instantiates the subclasses of asgn2Customers.Customer using the Factory Method pattern. 
@@ -28,8 +31,23 @@ public class CustomerFactory {
 	 * @throws CustomerException if the customerCode is not one of the three valid codes listed in Section 5.3 of the Assignment Specification. 
 	 */
 	public static Customer getCustomer(String customerCode, String name, String mobileNumber, int locationX,  int locationY) throws CustomerException{
-		// TODO What are valid customer codes
+		String codeForCustomer = customerCode;
+		String customerName = name;
+		String customerMobileNumber = mobileNumber;
+		int customerLocationX = locationX;
+		int customerLocationY = locationY;
 		
-		// TODO throw CustomerException when an invalid customer code is identified
+		if(codeForCustomer != "PUC" && codeForCustomer != "DNC" && codeForCustomer != "DVC") {
+			throw new CustomerException("Customer code is not valid");
+		}
+		if(codeForCustomer == "PUC") {
+			return customerPickUp;
+		}
+		if(codeForCustomer == "DNC") {
+			return customerDroneDelivery;
+		}
+		if(codeForCustomer == "DVC") {
+			return customerDriverDelivery;
+		}
 	}
 }

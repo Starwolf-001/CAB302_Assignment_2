@@ -2,6 +2,7 @@ package asgn2Pizzas;
 
 import java.time.LocalTime;
 
+import asgn2Exceptions.CustomerException;
 import asgn2Exceptions.PizzaException;
 
 /**
@@ -9,12 +10,11 @@ import asgn2Exceptions.PizzaException;
  * The classes are instantiated from one of the three valid pizza codes outlined in
  * Section 5.3 of the Assignment Specification. Any other code will throw a PizzaException.      
  *  
- * @author Person A
+ * @author Michael Cartwright
  *
  */
 
 public class PizzaFactory {
-
 
 	/**
 	 * A method that uses the Factory Method pattern to produce an instance of one of the asgn2Pizzas.Pizza subclasses. 
@@ -29,7 +29,23 @@ public class PizzaFactory {
 	 * @return A valid Pizza object using the specified parameters 
 	 * */
 	public static Pizza getPizza(String pizzaCode, int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException{
-		// TO DO
+		String codeForPizza = pizzaCode;
+		int pizzaQuantity = quantity;
+		LocalTime pizzaOrderTime = orderTime;
+		LocalTime pizzaDeliveryTime = deliveryTime;
+		
+		if(codeForPizza != "PZM" && codeForPizza!= "PZV" && codeForPizza != "PZL") {
+			throw new CustomerException("Pizza code is not valid");
+		}
+		if(codeForPizza == "PZM") {
+			return pizzaMargherita;
+		}
+		if(codeForPizza == "PZV") {
+			return pizzaVegetarian;
+		}
+		if(codeForPizza == "PZL") {
+			return pizzaMeatLovers;
+		}
 	}
 
 }
