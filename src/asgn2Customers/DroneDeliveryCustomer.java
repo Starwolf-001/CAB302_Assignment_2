@@ -15,6 +15,7 @@ public class DroneDeliveryCustomer extends Customer {
 	private String customerMobileNumber;
 	private int customerLocationX;
 	private int customerLocationY;
+	private double euclideanDistance;
 
 	/**
 	 *  This class represents a customer of the Pizza Palace restaurant that has chosen to have their pizza delivered by 
@@ -33,7 +34,7 @@ public class DroneDeliveryCustomer extends Customer {
 	 */
 	public DroneDeliveryCustomer(String name, String mobileNumber, int locationX, int locationY) throws CustomerException {
 
-		super(name, mobileNumber, locationX, locationY, "drone delivery");
+		super(name, mobileNumber, locationX, locationY, "Drone Delivery");
 		
 		if(customerName == "" || customerName == null) {
 			throw new CustomerException("customerName is an empty string or is null");
@@ -41,13 +42,20 @@ public class DroneDeliveryCustomer extends Customer {
 		if(customerMobileNumber == "" || customerMobileNumber == null) {
 			throw new CustomerException("customerMobileNumber is an empty string or is null");
 		}
-		// TODO Further look at location, can it have negative values?
-		// TODO Is there a maximum distance of blocks? etc
-		if(customerLocationX <= 0) {
-			throw new CustomerException("customerLocationX is either 0 or has a negative value");
+		if(customerLocationX == 0 && customerLocationY == 0) {
+			throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
 		}
-		if(customerLocationY <= 0) {
-			throw new CustomerException("customerLocationY is either 0 or has a negative value");
+		if(customerLocationX > 10 ) {
+			throw new CustomerException("Cannot deliver to customer more than 10 blocks East");
+		}
+		if(customerLocationX < -10 ) {
+			throw new CustomerException("Cannot deliver to customer more than 10 blocks West");
+		}
+		if(customerLocationY > 10) {
+			throw new CustomerException("Cannot deliver to customer more than 10 blocks North");
+		}
+		if(customerLocationY < -10) {
+			throw new CustomerException("Cannot deliver to customer more than 10 blocks South");
 		}
 	}
 
@@ -59,8 +67,8 @@ public class DroneDeliveryCustomer extends Customer {
 	 */
 	@Override
 	public double getDeliveryDistance() {
-		// TODO
-
+		euclideanDistance = Math.sqrt((0 - (customerLocationX * customerLocationX)) + (0 - (customerLocationY * customerLocationY)));
+		return euclideanDistance;
 	}
 	
 

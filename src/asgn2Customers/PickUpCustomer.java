@@ -31,7 +31,7 @@ public class PickUpCustomer extends Customer {
 	 * 
 	 */
 	public PickUpCustomer(String name, String mobileNumber, int locationX,  int locationY) throws CustomerException {
-super(name, mobileNumber, locationX, locationY, "pickup customer");
+super(name, mobileNumber, locationX, locationY, "Pick Up");
 		
 		if(customerName == "" || customerName == null) {
 			throw new CustomerException("customerName is an empty string or is null");
@@ -39,13 +39,11 @@ super(name, mobileNumber, locationX, locationY, "pickup customer");
 		if(customerMobileNumber == "" || customerMobileNumber == null) {
 			throw new CustomerException("customerMobileNumber is an empty string or is null");
 		}
-		// TODO Further look at location, can it have negative values?
-		// TODO Is there a maximum distance of blocks? etc
-		if(customerLocationX <= 0) {
-			throw new CustomerException("customerLocationX is either 0 or has a negative value");
+		if(customerLocationX != 0) {
+			throw new CustomerException("customerLocationX should have the same location as Pizza Palace's locationX; That value being 0");
 		}
-		if(customerLocationY <= 0) {
-			throw new CustomerException("customerLocationY is either 0 or has a negative value");
+		if(customerLocationY != 0) {
+			throw new CustomerException("customerLocationY should have the same location as Pizza Palace's locationY; That value being 0");
 		}
 	}
 
@@ -56,7 +54,7 @@ super(name, mobileNumber, locationX, locationY, "pickup customer");
 	 */
 	@Override
 	public double getDeliveryDistance() {
-		// TO DO
+		return 0;
 	}
 
 }

@@ -43,21 +43,34 @@ public abstract class Customer {
 		this.customerType = type;
 		
 		if(customerName == "" || customerName == null) {
-			throw new CustomerException("customerName is an empty string or is null");
+			throw new CustomerException("customerName is an empty string or is null.");
+		}
+		if(customerName.length() < 1 || customerName.length() > 18) {
+			throw new CustomerException("customerName requires between 1 to 20 characters.");
+		}
+		// This may fail
+		if(customerName.matches(" ")) {
+			throw new CustomerException("customerName cannot be filled with only white spaces.");
 		}
 		if(customerMobileNumber == "" || customerMobileNumber == null) {
-			throw new CustomerException("customerMobileNumber is an empty string or is null");
+			throw new CustomerException("customerMobileNumber is an empty string or is null.");
+		}
+		if(customerMobileNumber.length() != 9) {
+			throw new CustomerException("customerMobileNumber must be 10 digits long.");
+		}
+		if(customerMobileNumber.substring(0, 1) != "0") {
+			throw new CustomerException("customerMobileNumber must start with a 0.");
 		}
 		// TODO Further look at location, can it have negative values?
 		// TODO Is there a maximum distance of blocks? etc
 		if(customerLocationX <= 0) {
-			throw new CustomerException("customerLocationX is either 0 or has a negative value");
+			throw new CustomerException("customerLocationX is either 0 or has a negative value.");
 		}
 		if(customerLocationY <= 0) {
-			throw new CustomerException("customerLocationY is either 0 or has a negative value");
+			throw new CustomerException("customerLocationY is either 0 or has a negative value.");
 		}
 		if(customerType == "" || customerType == null) {
-			throw new CustomerException("customerType is an empty string or is null");
+			throw new CustomerException("customerType is an empty string or is null.");
 		}
 	}
 	
