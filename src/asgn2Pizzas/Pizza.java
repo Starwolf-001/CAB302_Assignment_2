@@ -21,7 +21,11 @@ public abstract class Pizza  {
 	private LocalTime pizzaOrderTime;
 	private LocalTime pizzaDeliveryTime;
 	private String pizzaType;
-	private Double pizzaPrice;
+	private Double perPizzaPrice;
+	private Double totalOrderCost;
+	private Double perPizzaCost;
+	private Double totalOrderPrice;
+	private Double totalOrderProfit;
 	
 	/**
 	 *  This class represents a pizza produced at the Pizza Palace restaurant.  A detailed description of the class's fields
@@ -45,32 +49,35 @@ public abstract class Pizza  {
 		this.pizzaOrderTime = orderTime;
 		this.pizzaDeliveryTime = deliveryTime;
 		this.pizzaType = type;
-		this.pizzaPrice = price;
+		this.perPizzaPrice = price;
 		
 		if(pizzaQuantity <= 0) {
-			throw new PizzaException("Pizza quantity cannot be less than or equal to 0.");
+			throw new PizzaException("Pizza quantity cannot be less than or equal to 0");
 		}
 		if(pizzaQuantity > 10) {
-			throw new PizzaException("Pizza quantity cannot be more than 10.");
+			throw new PizzaException("Pizza quantity cannot be more than 10");
 		}
 		if(pizzaOrderTime.getHour() < 19) {
-			throw new PizzaException("Pizza cannot be ordered before Pizza Palace has opened.");
+			throw new PizzaException("Pizza cannot be ordered before Pizza Palace has opened");
 		}
 		if(pizzaOrderTime.getHour() >= 23) {
-			throw new PizzaException("Pizza cannot be ordered after Pizza Palace has closed.");
+			throw new PizzaException("Pizza cannot be ordered after Pizza Palace has closed");
 		}
 		if(pizzaOrderTime == null) {
-			throw new PizzaException("Order time cannot be NULL.");
+			throw new PizzaException("Order time cannot be NULL");
 		}
 		// TODO need to further investigate
 		if(pizzaDeliveryTime == null) {
-			throw new PizzaException("Delivery Time cannot be NULL.");
+			throw new PizzaException("Delivery Time cannot be NULL");
+		}
+		if(pizzaDeliveryTime == pizzaOrderTime) {
+			throw new PizzaException("Delivery Time cannot be the same tiem as pizzaOrderTime");
 		}
 		if(pizzaType == "" || pizzaType == null) {
-			throw new PizzaException("Pizza type cannot be an empty string or NULL.");
+			throw new PizzaException("Pizza type cannot be an empty string or NULL");
 		}
 		if(pizzaPrice < 0) {
-			throw new PizzaException("Pizza quantity cannot be less than $0.00.");
+			throw new PizzaException("Pizza quantity cannot be less than $0.00");
 		}
 	}
 
@@ -81,7 +88,15 @@ public abstract class Pizza  {
 	 * <P> POST: The cost field is set to sum of the Pizzas's toppings
 	 */
 	public final void calculateCostPerPizza(){
-		// TODO How much does each pizza cost to make? [1]
+		if(pizzaType == "Margherita") {
+			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO);
+		}
+		if(pizzaType == "Vegetarian") {
+			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO, PizzaTopping.CAPSICUM, PizzaTopping.MUSHROOM, PizzaTopping.EGGPLANT);
+		}
+		if(pizzaType == "Meat Lovers") {
+			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO, PizzaTopping.BACON, PizzaTopping.SALAMI, PizzaTopping.PEPPERONI);
+		}
 	}
 	
 	/**
@@ -89,7 +104,7 @@ public abstract class Pizza  {
 	 * @return The amount that an individual pizza costs to make.
 	 */
 	public final double getCostPerPizza(){
-		// TODO How much does each pizza cost to make? [1]
+		return perPizzaCost;
 	}
 
 	/**
@@ -97,7 +112,7 @@ public abstract class Pizza  {
 	 * @return The amount that an individual pizza is sold to the customer.
 	 */
 	public final double getPricePerPizza(){
-		return pizzaPrice;
+		return perPizzaPrice;
 	}
 
 	/**
@@ -105,7 +120,7 @@ public abstract class Pizza  {
 	 * @return The amount that the entire order costs to make, taking into account the type and quantity of pizzas. 
 	 */
 	public final double getOrderCost(){
-		// TODO How much does each pizza cost to make? [1]
+		return totalOrderCost;
 	}
 	
 	/**
@@ -121,6 +136,7 @@ public abstract class Pizza  {
 		// int currentPizzaQuantity = pizza.getQuantity();
 		// double total = currentPizzaPrice * currentPizzaQuantity;
 		// totalCombinedPrice = currentPizza.total + otherPizza.total;
+		return totalOrderPrice;
 	}
 	
 	
@@ -131,6 +147,7 @@ public abstract class Pizza  {
 	public final double getOrderProfit(){
 		// TODO What is the profit per pizza?
 		//      Does profit change with different quantity ratios?
+		return totalOrderProfit;
 	}
 	
 
@@ -140,7 +157,7 @@ public abstract class Pizza  {
 	 * @return Returns  true if the instance of Pizza contains the specified topping and false otherwise.
 	 */
 	public final boolean containsTopping(PizzaTopping topping){
-		// TODO
+		 // TODO
 	}
 	
 	/**
@@ -159,7 +176,6 @@ public abstract class Pizza  {
 	public final String getPizzaType(){
 		return pizzaType;
 	}
-
 
 	/**
 	 * Compares *this* Pizza object with an instance of an *other* Pizza object and returns true if  
@@ -181,7 +197,5 @@ public abstract class Pizza  {
 			(this.getPizzaType() == (otherPizza.getPizzaType()) &&
 			(this.getPricePerPizza()) == (otherPizza.getPricePerPizza()) &&
 			(this.getQuantity()) == (otherPizza.getQuantity()));
-	}
-
-	
+	}	
 }
