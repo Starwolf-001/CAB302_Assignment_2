@@ -76,7 +76,7 @@ public abstract class Pizza  {
 		if(pizzaType == "" || pizzaType == null) {
 			throw new PizzaException("Pizza type cannot be an empty string or NULL");
 		}
-		if(pizzaPrice < 0) {
+		if(perPizzaPrice < 0) {
 			throw new PizzaException("Pizza quantity cannot be less than $0.00");
 		}
 	}
@@ -89,12 +89,15 @@ public abstract class Pizza  {
 	 */
 	public final void calculateCostPerPizza(){
 		if(pizzaType == "Margherita") {
+			// TODO ENUMS and public final boolean containsTopping(PizzaTopping topping)
 			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO);
 		}
 		if(pizzaType == "Vegetarian") {
+			// TODO ENUMS and public final boolean containsTopping(PizzaTopping topping)
 			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO, PizzaTopping.CAPSICUM, PizzaTopping.MUSHROOM, PizzaTopping.EGGPLANT);
 		}
 		if(pizzaType == "Meat Lovers") {
+			// TODO ENUMS and public final boolean containsTopping(PizzaTopping topping)
 			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO, PizzaTopping.BACON, PizzaTopping.SALAMI, PizzaTopping.PEPPERONI);
 		}
 	}

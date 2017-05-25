@@ -41,12 +41,15 @@ public class CustomerFactory {
 			throw new CustomerException("Customer code is not valid");
 		}
 		if(codeForCustomer == "PUC") {
+			// TODO
 			return customerPickUp;
 		}
 		if(codeForCustomer == "DNC") {
+			// TODO
 			return customerDroneDelivery;
 		}
 		if(codeForCustomer == "DVC") {
+			// TODO
 			return customerDriverDelivery;
 		}
 	}
