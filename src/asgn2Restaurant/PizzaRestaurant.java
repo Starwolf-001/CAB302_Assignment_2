@@ -3,6 +3,9 @@ package asgn2Restaurant;
 import java.util.ArrayList;
 
 import asgn2Customers.Customer;
+import asgn2Exceptions.CustomerException;
+import asgn2Exceptions.LogHandlerException;
+import asgn2Exceptions.PizzaException;
 import asgn2Pizzas.Pizza;
 
 /**
@@ -32,7 +35,9 @@ public class PizzaRestaurant {
 	 * 
 	 */
 	public PizzaRestaurant() {
-		// TO DO
+		customers = new ArrayList<Customer>();
+		pizzas = new ArrayList<Pizza>();
+		
 	}
 
 	/**
@@ -51,7 +56,9 @@ public class PizzaRestaurant {
      *
 	 */
 	public boolean processLog(String filename) throws CustomerException, PizzaException, LogHandlerException{
-		// TO DO
+		LogHandler.populateCustomerDataset(filename);
+		LogHandler.populatePizzaDataset(filename);
+		return true;
 	}
 
 	/**
@@ -61,7 +68,7 @@ public class PizzaRestaurant {
 	 * @throws CustomerException if index is invalid.
 	 */
 	public Customer getCustomerByIndex(int index) throws CustomerException{
-		// TO DO
+		return customers.get(index);
 	}
 	
 	/**
@@ -71,7 +78,7 @@ public class PizzaRestaurant {
 	 * @throws PizzaException if index is invalid.
 	 */	
 	public Pizza getPizzaByIndex(int index) throws PizzaException{
-		// TO DO
+		return pizzas.get(index);
 	}
 	
 	/**
@@ -81,7 +88,7 @@ public class PizzaRestaurant {
 	 * @return the number of objects contained in the pizzas field.
 	 */
 	public int getNumPizzaOrders(){
-		// TO DO
+		return pizzas.size();
 	}
 
 	/**
@@ -91,7 +98,7 @@ public class PizzaRestaurant {
 	 * @return the number of objects contained in the customers field.
 	 */
 	public int getNumCustomerOrders(){
-		// TO DO
+		return customers.size();
 	}
 
 			
@@ -102,7 +109,11 @@ public class PizzaRestaurant {
 	 * @return the total delivery distance for all Customers objects in the customers field.
 	 */
 	public double getTotalDeliveryDistance(){
-		// TO DO
+		double totalDist = 0;
+		for(Customer c: customers){
+			totalDist = totalDist + c.getDeliveryDistance();
+		}
+		return totalDist;
 	}
 
 	/**
@@ -111,7 +122,11 @@ public class PizzaRestaurant {
 	 * @return the total profit for all of the Pizza objects in the pizzas field.
 	 */	
 	public double getTotalProfit(){
-		// TO DO
+		double totalProf = 0;
+		for(Pizza c: pizzas){
+			totalProf = totalProf + c.getOrderProfit();
+		}
+		return totalProf;
 	}
 	
 	/**
@@ -121,7 +136,9 @@ public class PizzaRestaurant {
 	 * <P> POST:  The pizzas and customers fields are set to their initial empty states
 	 */
 	public void resetDetails(){
-		// TO DO
+		customers.clear();
+		pizzas.clear();
+		
 	}
 
 }
