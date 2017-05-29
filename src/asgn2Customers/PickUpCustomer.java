@@ -11,6 +11,9 @@ import asgn2Exceptions.CustomerException;
  *
  */
 public class PickUpCustomer extends Customer {
+	
+	private int customerLocationX;
+	private int customerLocationY;
 
 	/**
 	 *  This class represents a customer of the Pizza Palace restaurant that has chosen to pickup their pizza at the restaurant. 
@@ -28,6 +31,11 @@ public class PickUpCustomer extends Customer {
 	 */
 	public PickUpCustomer(String name, String mobileNumber, int locationX,  int locationY) throws CustomerException {
 		super(name, mobileNumber, locationX, locationY, "Pick Up");
+		customerLocationX = locationX;
+		customerLocationY = locationY;
+		if(this.customerLocationX != 0 || this.customerLocationY != 0) {
+			throw new CustomerException("Pick Up customers must have a locationX and locationY value of 0");
+		}
 	}
 
 	/**

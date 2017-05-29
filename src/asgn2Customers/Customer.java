@@ -92,7 +92,7 @@ public abstract class Customer {
 		if(customerLocationY < -10 || customerLocationY > 10) {
 			throw new CustomerException("customerLocationY is either greater than 10 or less than -10");
 		}
-		if(customerType == "" || customerType == null) {
+		if(customerType != "Pick Up" && customerType != "Drone Delivery" && customerType != "Driver Delivery") {
 			throw new CustomerException("customerType is an empty string or is null");
 		}
 	}

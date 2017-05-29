@@ -34,6 +34,9 @@ public class DroneDeliveryCustomer extends Customer {
 		super(name, mobileNumber, locationX, locationY, "Drone Delivery");
 		this.customerLocationX = locationX;
 		this.customerLocationY = locationY;
+		if(this.customerLocationX == 0 && this.customerLocationY == 0) {
+			throw new CustomerException("Drone delivery customers cannot be at Pizza Palace");
+		}
 	}
 
 	/**
@@ -44,7 +47,7 @@ public class DroneDeliveryCustomer extends Customer {
 	 */
 	@Override
 	public double getDeliveryDistance() {
-		this.euclideanDistance = Math.sqrt((0 - (this.customerLocationX * this.customerLocationX)) + (0 - (this.customerLocationY * this.customerLocationY)));
+		this.euclideanDistance = Math.sqrt(Math.pow(0 - customerLocationX, 2) + Math.pow(0 - customerLocationY, 2));
 		return euclideanDistance;
 	}
 	

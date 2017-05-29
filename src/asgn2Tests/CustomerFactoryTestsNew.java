@@ -23,6 +23,24 @@ public class CustomerFactoryTestsNew {
 	 * @throws CustomerException
 	 */
 	
+	// Expecting correct customerCodes for three customers
+	@Test
+	public void testCustomerFactoryCorrectCodes() throws CustomerException {
+		//Create CustomerFactory
+		String pucName = "Michael Cartwright";
+		String dncName = "Matthew Pike";
+		String dvcName = "Alan Woodley";
+		Customer newCustomerPUC = CustomerFactory.getCustomer("PUC", pucName, "0412345678", 0, 0);
+		Customer newCustomerDNC = CustomerFactory.getCustomer("DNC", dncName, "0412345678", 5, 5);
+		Customer newCustomerDVC = CustomerFactory.getCustomer("DVC", dvcName, "0412345678", 5, 5);
+		if(newCustomerPUC.getName() == pucName && newCustomerDNC.getName() == dncName && newCustomerDVC.getName() == dvcName){
+			assertTrue(true);
+		} else{
+			//Should never reach here
+			fail("All three customers should have correct customer codes");
+		}
+	}
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerFactoryInvalidCode() throws CustomerException {
@@ -63,7 +81,7 @@ public class CustomerFactoryTestsNew {
 	@Test(expected=CustomerException.class)
 	public void testCustomerUpperXLocationBounds() throws CustomerException {
 		//Create CustomerFactory
-		Customer newCustomer = CustomerFactory.getCustomer("PUC", "Michael Cartwright", "0412345678", 12, 0);
+		Customer newCustomer = CustomerFactory.getCustomer("DVC", "Michael Cartwright", "0412345678", 12, 0);
 		//Should never reach here
 		fail("Exception is expected");
 	}
@@ -72,7 +90,7 @@ public class CustomerFactoryTestsNew {
 	@Test(expected=CustomerException.class)
 	public void testCustomerUpperYLocationBounds() throws CustomerException {
 		//Create CustomerFactory
-		Customer newCustomer = CustomerFactory.getCustomer("PUC", "Michael Cartwright", "0412345678", 0, 12);
+		Customer newCustomer = CustomerFactory.getCustomer("DVC", "Michael Cartwright", "0412345678", 0, 12);
 		//Should never reach here
 		fail("Exception is expected");
 	}
@@ -81,7 +99,7 @@ public class CustomerFactoryTestsNew {
 	@Test(expected=CustomerException.class)
 	public void testCustomerLowerXLocationBounds() throws CustomerException {
 		//Create CustomerFactory
-		Customer newCustomer = CustomerFactory.getCustomer("PUC", "Michael Cartwright", "0412345678", -12, 0);
+		Customer newCustomer = CustomerFactory.getCustomer("DVC", "Michael Cartwright", "0412345678", -12, 0);
 		//Should never reach here
 		fail("Exception is expected");
 	}
@@ -90,7 +108,7 @@ public class CustomerFactoryTestsNew {
 	@Test(expected=CustomerException.class)
 	public void testCustomerLowerYLocationBounds() throws CustomerException {
 		//Create CustomerFactory
-		Customer newCustomer = CustomerFactory.getCustomer("PUC", "Michael Cartwright", "0412345678", 0, -12);
+		Customer newCustomer = CustomerFactory.getCustomer("DVC", "Michael Cartwright", "0412345678", 0, -12);
 		//Should never reach here
 		fail("Exception is expected");
 	}
@@ -163,24 +181,6 @@ public class CustomerFactoryTestsNew {
 		}
 	}
 	
-	// Expecting correct customerCodes for three customers
-	@Test
-	public void testCustomerFactoryCorrectCodes() throws CustomerException {
-		//Create CustomerFactory
-		String pucName = "Michael Cartwright";
-		String dncName = "Matthew Pike";
-		String dvcName = "Alan Woodley";
-		Customer newCustomerPUC = CustomerFactory.getCustomer("PUC", pucName, "0412345678", 0, 0);
-		Customer newCustomerDNC = CustomerFactory.getCustomer("DNC", dncName, "0412345678", 5, 5);
-		Customer newCustomerDVC = CustomerFactory.getCustomer("DVC", dvcName, "0412345678", 5, 5);
-		if(newCustomerPUC.getName() == pucName && newCustomerDNC.getName() == dncName && newCustomerDVC.getName() == dvcName){
-			assertTrue(true);
-		} else{
-			//Should never reach here
-			fail("All three customers should have correct customer codes");
-		}
-	}
-	
 	// Expecting an exception
 		@Test(expected=CustomerException.class)
 		public void testCustomerNameEmpty() throws CustomerException {
@@ -231,6 +231,14 @@ public class CustomerFactoryTestsNew {
 	public void testCustomerNameWhiteSpace() throws CustomerException {
 		//Create Customer
 		Customer newCustomer = CustomerFactory.getCustomer("PUC", "     ", "0412345678", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileWhiteSpace() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = CustomerFactory.getCustomer("PUC", "Ryuuko Matoi", "04 2345678", 0, 0);
 		fail("Exception Expected");
 	}
 }

@@ -34,6 +34,9 @@ public class DriverDeliveryCustomer extends Customer {
 		super(name, mobileNumber, locationX, locationY, "Driver Delivery");
 		this.customerLocationX = locationX;
 		this.customerLocationY = locationY;
+		if(this.customerLocationX == 0 && this.customerLocationY == 0) {
+			throw new CustomerException("Driver delivery customers cannot be at Pizza Palace");
+		}
 	}
 	
 	/**

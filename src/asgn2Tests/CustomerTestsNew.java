@@ -8,7 +8,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import asgn2Customers.Customer;
-import asgn2Customers.CustomerFactory;
 import asgn2Customers.DriverDeliveryCustomer;
 import asgn2Customers.DroneDeliveryCustomer;
 import asgn2Customers.PickUpCustomer;
@@ -83,54 +82,322 @@ public class CustomerTestsNew {
 		Customer newCustomer = new PickUpCustomer("     ", "0412345678", 0, 0);
 		fail("Exception Expected");
 	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileNumberEmpty() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileNumberNull() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", null, 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileNumberIncorrectStart() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "1412345678", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileNumberIncorrectSecond() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "0112345678", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileNumberNonDigit() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "04S0000000", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileNumberShort() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "041234567", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileNumberLong() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "04123456789", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerMobileWhiteSpace() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "04 2345678", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerXUpperBound() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new DroneDeliveryCustomer("Rebecca Lee", "0412345678", 11, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerYUpperBound() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new DroneDeliveryCustomer("Rebecca Lee", "0412345678", 0, 11);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerXLowerBound() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new DroneDeliveryCustomer("Rebecca Lee", "0412345678", -11, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerYLowerBound() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new DroneDeliveryCustomer("Rebecca Lee", "0412345678", 0, -11);
+		fail("Exception Expected");
+	}
+	
+	// Expecting PickUpCustomer to implement successfully
+	@Test
+	public void testCustomerPickUpLocationSuccess() throws CustomerException {
+		//Create Customer
+		int locationX = 0;
+		int locationY = 0;
+		Customer newCustomer = new PickUpCustomer("Seras Victoria", "0412345678", locationX, locationY);
+		//Check 
+		if(newCustomer.getCustomerType() == "Pick Up" && newCustomer.getDeliveryDistance() == 0 &&
+		   newCustomer.getLocationX() == locationX && newCustomer.getLocationY() == locationY) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to be implemented correctly as type 'Pick Up'");
+		}
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerPickUpLocationXFail() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Edward Elric", "0412345678", 1, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerPickUpLocationYFail() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Edward Elric", "0412345678", 0, 1);
+		fail("Exception Expected");
+	}
+	
+	// Expecting DroneDeliveryCustomer to implement successfully
+	@Test
+	public void testCustomerDroneDeliveryLocationSuccess() throws CustomerException {
+		//Create Customer
+		int locationX = 5;
+		int locationY = -5;
+		Customer newCustomer = new DroneDeliveryCustomer("Lelouche", "0412345678", locationX, locationY);
+		//Check 
+		if(newCustomer.getCustomerType() == "Drone Delivery" && newCustomer.getLocationX() == locationX 
+		   && newCustomer.getLocationY() == locationY) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to be implemented correctly as type 'Drone Delivery'");
+		}
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerDroneDeliveryLocationFail() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new DroneDeliveryCustomer("Light Yagami", "0412345678", 0, 0);
+		fail("Exception Expected");
+	}
+	
+	// Expecting DriverDeliveryCustomer to implement successfully
+	@Test
+	public void testCustomerDriverDeliveryLocationSuccess() throws CustomerException {
+		//Create Customer
+		int locationX = 5;
+		int locationY = -5;
+		Customer newCustomer = new DriverDeliveryCustomer("Lelouche", "0412345678", locationX, locationY);
+		//Check 
+		if(newCustomer.getCustomerType() == "Driver Delivery" && newCustomer.getLocationX() == locationX 
+		   && newCustomer.getLocationY() == locationY) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to be implemented correctly as type 'Driver Delivery' with ");
+		}
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerDriverDeliveryLocationFail() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new DriverDeliveryCustomer("Ichigo Kurosaki", "0412345678", 0, 0);
+		fail("Exception Expected");
+	}
 
 	/**
-	 * Test method for {@link asgn2Customers.Customer#getName()}.
+	 * Test method for getName
+	 * {@link asgn2Customers.Customer#getName()}.
+	 * @throws CustomerException
 	 */
-	//@Test
-	//public void testGetName() {
-	//	fail("Not yet implemented");
-	//}
+	@Test
+	public void testGetName() throws CustomerException {
+		//Create Customer
+		String customerName = "Goku";
+		Customer newCustomer = new PickUpCustomer(customerName, "0412345678", 0, 0);
+		//Check 
+		if(newCustomer.getName() == customerName) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to obtain the same customer name");
+		}
+	}
 
 	/**
-	 * Test method for {@link asgn2Customers.Customer#getMobileNumber()}.
+	 * Test method for getMobileNumber
+	 * {@link asgn2Customers.Customer#getMobileNumber()}.
+	 * @throws CustomerException
 	 */
-	//@Test
-	//public void testGetMobileNumber() {
-	//	fail("Not yet implemented");
-	//}
+	@Test
+	public void testGetMobileNumber() throws CustomerException {
+		//Create Customer
+		String mobileNumber = "0412345678";
+		Customer newCustomer = new PickUpCustomer("Monkey D Luffy", mobileNumber, 0, 0);
+		//Check 
+		if(newCustomer.getMobileNumber() == mobileNumber) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to obtain the same customer mobile number");
+		}
+	}
 
 	/**
-	 * Test method for {@link asgn2Customers.Customer#getCustomerType()}.
+	 * Test method for getCustomerType
+	 * {@link asgn2Customers.Customer#getCustomerType()}.
+	 * @throws CustomerException
 	 */
-	//@Test
-	//public void testGetCustomerType() {
-	//	fail("Not yet implemented");
-	//}
+	@Test
+	public void testGetCustomerType() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = new PickUpCustomer("Natsu Dragneel", "0412345678", 0, 0);
+		//Check 
+		if(newCustomer.getCustomerType() == "Pick Up") {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to obtain the same customer mobile number");
+		}
+	}
 
 	/**
-	 * Test method for {@link asgn2Customers.Customer#getLocationX()}.
+	 * Test method for getLocationX
+	 * {@link asgn2Customers.Customer#getLocationX()}.
+	 * @throws CustomerException
 	 */
-	//@Test
-	//public void testGetLocationX() {
-	//	fail("Not yet implemented");
-	//}
+	@Test
+	public void testGetLocationX() throws CustomerException {
+		//Create Customer
+		int locationX = 5;
+		int locationY = -5;
+		Customer newCustomer = new DriverDeliveryCustomer("Vegeta", "0412345678", locationX, locationY);
+		//Check 
+		if(newCustomer.getLocationX() == locationX) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to obtain the same customer locationX");
+		}
+	}
 
 	/**
-	 * Test method for {@link asgn2Customers.Customer#getLocationY()}.
+	 * Test method for getLocationY
+	 * {@link asgn2Customers.Customer#getLocationY()}.
+	 * @throws CustomerException
 	 */
-	//@Test
-	//public void testGetLocationY() {
-	//	fail("Not yet implemented");
-	//}
+	@Test
+	public void testGetLocationY() throws CustomerException {
+		//Create Customer
+		int locationX = 5;
+		int locationY = -5;
+		Customer newCustomer = new DriverDeliveryCustomer("Roy Mustang", "0412345678", locationX, locationY);
+		//Check 
+		if(newCustomer.getLocationY() == locationY) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to obtain the same customer locationY");
+		}
+	}
 
 	/**
-	 * Test method for {@link asgn2Customers.Customer#getDeliveryDistance()}.
+	 * Test method for getDeliveryDistance for Pick Up customer type
+	 * {@link asgn2Customers.Customer#getDeliveryDistance()}.
+	 * @throws CustomerException
 	 */
-	//@Test
-	//public void testGetDeliveryDistance() {
-	//	fail("Not yet implemented");
-	//}
+	@Test
+	public void testGetDeliveryDistancePickUp() throws CustomerException {
+		//Create Customer
+		int locationX = 0;
+		int locationY = 0;
+		Customer newCustomer = new PickUpCustomer("C C", "0412345678", locationX, locationY);
+		//Check 
+		if(newCustomer.getDeliveryDistance() == 0) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Customer failed to obtain the same customer locationY");
+		}
+	}
+	
+	/**
+	 * Test method for getDeliveryDistance for Drone Delivery customer type
+	 * {@link asgn2Customers.Customer#getDeliveryDistance()}.
+	 * @throws CustomerException
+	 */
+	@Test
+	public void testGetDeliveryDistanceDroneDelivery() throws CustomerException {
+		//Create Customer
+		int locationX = 5;
+		int locationY = 5;
+		double euclideanDistance = Math.sqrt(Math.pow(0 - locationX, 2) + Math.pow(0 - locationY, 2));
+		Customer newCustomer = new DroneDeliveryCustomer("C C", "0412345678", locationX, locationY);
+		//Check 
+		if(newCustomer.getDeliveryDistance() == euclideanDistance) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Failed to obtain the same distance value");
+		}
+	}
 
 	/**
 	 * Test method for {@link asgn2Customers.Customer#equals(java.lang.Object)}.
