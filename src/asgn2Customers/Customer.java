@@ -17,6 +17,7 @@ public abstract class Customer {
 	private int customerLocationX;
 	private int customerLocationY;
 	private String customerType;
+	private int customerNameLength;
 
 	/**
 	 *  This class represents a customer of the Pizza Palace restaurant.  A detailed description of the class's fields
@@ -46,11 +47,18 @@ public abstract class Customer {
 			throw new CustomerException("customerName is an empty string or is null");
 		}
 		if(customerName.length() < 1 || customerName.length() > 18) {
-			throw new CustomerException("customerName requires between 1 to 20 characters");
+			throw new CustomerException("customerName requires between 1 to 18 characters");
 		}
-		// This may fail
 		if(customerName.matches(" ")) {
 			throw new CustomerException("customerName cannot be filled with only white spaces");
+		}
+		customerNameLength = customerName.length();
+		for(int indexLetter = 0; indexLetter >= customerNameLength; indexLetter++) {
+			if(Character.isLetter(customerName.charAt(indexLetter)) || customerName.charAt(indexLetter) == ' ') {
+				// Do nothing as character is a letter or space
+			} else {
+				throw new CustomerException("customerName cannot contain numeric digits");
+			}
 		}
 		if(customerMobileNumber == "" || customerMobileNumber == null) {
 			throw new CustomerException("customerMobileNumber is an empty string or is null");
@@ -64,8 +72,10 @@ public abstract class Customer {
 		if(customerMobileNumber.charAt(1) != '4') {
 			throw new CustomerException("customerMobileNumber second figure must be 4");
 		}
-		for(int index = 2; customerMobileNumber.charAt(index) > 10; index++) {
-			if(customerMobileNumber.charAt(index) >= '0' && customerMobileNumber.charAt(index) <= '9') {
+		for(int indexDigit = 0; indexDigit >= 10; indexDigit++) {
+			if(Character.isDigit(customerMobileNumber.charAt(indexDigit))) {
+				// Do nothing as character is a digit
+			} else {
 				throw new CustomerException("customerMobileNumber must only contain numbers from, and including, 0 to 9");
 			}
 		}

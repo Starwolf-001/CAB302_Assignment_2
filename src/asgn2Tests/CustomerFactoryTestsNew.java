@@ -149,6 +149,20 @@ public class CustomerFactoryTestsNew {
 		fail("Exception is expected");
 	}
 	
+	// Expecting the mobileNumber to be correct
+	@Test
+	public void testCustomerMobileNumberCorrect() throws CustomerException {
+		//Create CustomerFactory
+		String testMobileNumber = "0498765432";
+		Customer newCustomer = CustomerFactory.getCustomer("PUC", "Michael Cartwright", testMobileNumber, 0, 0);
+		if(newCustomer.getMobileNumber() == testMobileNumber){
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Mobile number is not correct");
+		}
+	}
+	
 	// Expecting correct customerCodes for three customers
 	@Test
 	public void testCustomerFactoryCorrectCodes() throws CustomerException {
@@ -165,5 +179,32 @@ public class CustomerFactoryTestsNew {
 			//Should never reach here
 			fail("All three customers should have correct customer codes");
 		}
+	}
+	
+	// Expecting an exception
+		@Test(expected=CustomerException.class)
+		public void testCustomerNameEmpty() throws CustomerException {
+			//Create CustomerFactory
+			Customer newCustomer = CustomerFactory.getCustomer("PUC", "", "0412345678", 0, 0);
+			//Should never reach here
+			fail("Exception is expected");
+	}
+		
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerNameNull() throws CustomerException {
+		//Create CustomerFactory
+		Customer newCustomer = CustomerFactory.getCustomer("PUC", null, "0412345678", 0, 0);
+		//Should never reach here
+		fail("Exception is expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerNameDigits() throws CustomerException {
+		//Create CustomerFactory
+		Customer newCustomer = CustomerFactory.getCustomer("PUC", "B055M4N", "0412345678", 0, 0);
+		//Should never reach here
+		fail("Exception is expected");
 	}
 }
