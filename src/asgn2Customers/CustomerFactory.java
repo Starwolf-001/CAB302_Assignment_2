@@ -1,10 +1,7 @@
 package asgn2Customers;
 
 
-import java.time.LocalTime;
-
 import asgn2Exceptions.CustomerException;
-import asgn2Exceptions.PizzaException;
 
 /**
  * A class that instantiates the subclasses of asgn2Customers.Customer using the Factory Method pattern. 
@@ -32,15 +29,12 @@ public class CustomerFactory {
 	 */
 	public static Customer getCustomer(String customerCode, String name, String mobileNumber, int locationX,  int locationY) throws CustomerException{
 		if(customerCode == "PUC") {
-			// TODO
 			return new PickUpCustomer(name, mobileNumber, locationX, locationY);
 		}
 		if(customerCode == "DNC") {
-			// TODO
 			return new DroneDeliveryCustomer(name, mobileNumber, locationX, locationY);
 		}
 		if(customerCode == "DVC") {
-			// TODO
 			return new DriverDeliveryCustomer(name, mobileNumber, locationX, locationY);
 		}
 		else {

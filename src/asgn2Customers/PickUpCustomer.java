@@ -31,20 +31,20 @@ public class PickUpCustomer extends Customer {
 	 * 
 	 */
 	public PickUpCustomer(String name, String mobileNumber, int locationX,  int locationY) throws CustomerException {
-super(name, mobileNumber, locationX, locationY, "Pick Up");
+		super(name, mobileNumber, locationX, locationY, "Pick Up");
 		
-		if(customerName == "" || customerName == null) {
-			throw new CustomerException("customerName is an empty string or is null");
-		}
-		if(customerMobileNumber == "" || customerMobileNumber == null) {
-			throw new CustomerException("customerMobileNumber is an empty string or is null");
-		}
-		if(customerLocationX != 0) {
-			throw new CustomerException("customerLocationX should have the same location as Pizza Palace's locationX; That value being 0");
-		}
-		if(customerLocationY != 0) {
-			throw new CustomerException("customerLocationY should have the same location as Pizza Palace's locationY; That value being 0");
-		}
+//		if(customerName == "" || customerName == null) {
+//			throw new CustomerException("customerName is an empty string or is null");
+//		}
+//		if(customerMobileNumber == "" || customerMobileNumber == null) {
+//			throw new CustomerException("customerMobileNumber is an empty string or is null");
+//		}
+//		if(customerLocationX != 0) {
+//			throw new CustomerException("customerLocationX should have the same location as Pizza Palace's locationX; That value being 0");
+//		}
+//		if(customerLocationY != 0) {
+//			throw new CustomerException("customerLocationY should have the same location as Pizza Palace's locationY; That value being 0");
+//		}
 	}
 
 	/**

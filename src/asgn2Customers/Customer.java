@@ -43,34 +43,40 @@ public abstract class Customer {
 		this.customerType = type;
 		
 		if(customerName == "" || customerName == null) {
-			throw new CustomerException("customerName is an empty string or is null.");
+			throw new CustomerException("customerName is an empty string or is null");
 		}
 		if(customerName.length() < 1 || customerName.length() > 18) {
-			throw new CustomerException("customerName requires between 1 to 20 characters.");
+			throw new CustomerException("customerName requires between 1 to 20 characters");
 		}
 		// This may fail
 		if(customerName.matches(" ")) {
-			throw new CustomerException("customerName cannot be filled with only white spaces.");
+			throw new CustomerException("customerName cannot be filled with only white spaces");
 		}
 		if(customerMobileNumber == "" || customerMobileNumber == null) {
-			throw new CustomerException("customerMobileNumber is an empty string or is null.");
+			throw new CustomerException("customerMobileNumber is an empty string or is null");
 		}
-		if(customerMobileNumber.length() != 9) {
-			throw new CustomerException("customerMobileNumber must be 10 digits long.");
+		if(customerMobileNumber.length() != 10) {
+			throw new CustomerException("customerMobileNumber must be 10 digits long");
 		}
-		if(customerMobileNumber.substring(0, 1) != "0") {
-			throw new CustomerException("customerMobileNumber must start with a 0.");
+		if(customerMobileNumber.charAt(0) != '0') {
+			throw new CustomerException("customerMobileNumber must start with a 0");
 		}
-		// TODO Further look at location, can it have negative values?
-		// TODO Is there a maximum distance of blocks? etc
-		if(customerLocationX <= 0) {
-			throw new CustomerException("customerLocationX is either 0 or has a negative value.");
+		if(customerMobileNumber.charAt(1) != '4') {
+			throw new CustomerException("customerMobileNumber second figure must be 4");
 		}
-		if(customerLocationY <= 0) {
-			throw new CustomerException("customerLocationY is either 0 or has a negative value.");
+		for(int index = 2; customerMobileNumber.charAt(index) > 10; index++) {
+			if(customerMobileNumber.charAt(index) >= '0' && customerMobileNumber.charAt(index) <= '9') {
+				throw new CustomerException("customerMobileNumber must only contain numbers from, and including, 0 to 9");
+			}
+		}
+		if(customerLocationX < -10 || customerLocationX > 10) {
+			throw new CustomerException("customerLocationX is either greater than 10 or less than -10");
+		}
+		if(customerLocationY < -10 || customerLocationY > 10) {
+			throw new CustomerException("customerLocationY is either greater than 10 or less than -10");
 		}
 		if(customerType == "" || customerType == null) {
-			throw new CustomerException("customerType is an empty string or is null.");
+			throw new CustomerException("customerType is an empty string or is null");
 		}
 	}
 	
@@ -79,7 +85,7 @@ public abstract class Customer {
 	 * @return The Customer's name.
 	 */
 	public final String getName(){
-		return customerName;
+		return this.customerName;
 	}
 	
 	/**
@@ -87,7 +93,7 @@ public abstract class Customer {
 	 * @return The Customer's mobile number.
 	 */
 	public final String getMobileNumber(){
-		return customerMobileNumber;
+		return this.customerMobileNumber;
 	}
 
 	/**
@@ -96,7 +102,7 @@ public abstract class Customer {
 	 * @return A human understandable description of the Customer's type.
 	 */
 	public final String getCustomerType(){
-		return customerType;
+		return this.customerType;
 	}
 	
 	/**
@@ -105,7 +111,7 @@ public abstract class Customer {
 	 * @return The Customer's X location
 	 */
 	public final int getLocationX(){
-		return customerLocationX;
+		return this.customerLocationX;
 	}
 
 	/**
@@ -114,7 +120,7 @@ public abstract class Customer {
 	 * @return The Customer's Y location
 	 */
 	public final int getLocationY(){
-		return customerLocationY;
+		return this.customerLocationY;
 	}
 
 	/**

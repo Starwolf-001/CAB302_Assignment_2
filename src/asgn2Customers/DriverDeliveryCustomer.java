@@ -36,27 +36,27 @@ public class DriverDeliveryCustomer extends Customer {
 		
 		super(name, mobileNumber, locationX, locationY, "Driver Delivery");
 		
-		if(customerName == "" || customerName == null) {
-			throw new CustomerException("customerName is an empty string or is null");
-		}
-		if(customerMobileNumber == "" || customerMobileNumber == null) {
-			throw new CustomerException("customerMobileNumber is an empty string or is null");
-		}
-		if(customerLocationX == 0 && customerLocationY == 0) {
-			throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
-		}
-		if(customerLocationX > 10 ) {
-			throw new CustomerException("Cannot deliver to customer more than 10 blocks East");
-		}
-		if(customerLocationX < -10 ) {
-			throw new CustomerException("Cannot deliver to customer more than 10 blocks West");
-		}
-		if(customerLocationY > 10) {
-			throw new CustomerException("Cannot deliver to customer more than 10 blocks North");
-		}
-		if(customerLocationY < -10) {
-			throw new CustomerException("Cannot deliver to customer more than 10 blocks South");
-		}
+//		if(customerName == "" || customerName == null) {
+//			throw new CustomerException("customerName is an empty string or is null");
+//		}
+//		if(customerMobileNumber == "" || customerMobileNumber == null) {
+//			throw new CustomerException("customerMobileNumber is an empty string or is null");
+//		}
+//		if(customerLocationX == 0 && customerLocationY == 0) {
+//			throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
+//		}
+//		if(customerLocationX > 10 ) {
+//			throw new CustomerException("Cannot deliver to customer more than 10 blocks East");
+//		}
+//		if(customerLocationX < -10 ) {
+//			throw new CustomerException("Cannot deliver to customer more than 10 blocks West");
+//		}
+//		if(customerLocationY > 10) {
+//			throw new CustomerException("Cannot deliver to customer more than 10 blocks North");
+//		}
+//		if(customerLocationY < -10) {
+//			throw new CustomerException("Cannot deliver to customer more than 10 blocks South");
+//		}
 	}
 	
 	/**
