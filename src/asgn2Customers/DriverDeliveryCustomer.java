@@ -11,8 +11,6 @@ import asgn2Exceptions.CustomerException;
  *
  */
 public class DriverDeliveryCustomer extends Customer {
-	private String customerName;
-	private String customerMobileNumber;
 	private int customerLocationX;
 	private int customerLocationY;
 	private double manhattanDistance;
@@ -33,30 +31,9 @@ public class DriverDeliveryCustomer extends Customer {
 	 * 
 	 */
 	public DriverDeliveryCustomer(String name, String mobileNumber, int locationX, int locationY) throws CustomerException {
-		
 		super(name, mobileNumber, locationX, locationY, "Driver Delivery");
-		
-//		if(customerName == "" || customerName == null) {
-//			throw new CustomerException("customerName is an empty string or is null");
-//		}
-//		if(customerMobileNumber == "" || customerMobileNumber == null) {
-//			throw new CustomerException("customerMobileNumber is an empty string or is null");
-//		}
-//		if(customerLocationX == 0 && customerLocationY == 0) {
-//			throw new CustomerException("Cannot deliver to the customer when they are at the restaurant");
-//		}
-//		if(customerLocationX > 10 ) {
-//			throw new CustomerException("Cannot deliver to customer more than 10 blocks East");
-//		}
-//		if(customerLocationX < -10 ) {
-//			throw new CustomerException("Cannot deliver to customer more than 10 blocks West");
-//		}
-//		if(customerLocationY > 10) {
-//			throw new CustomerException("Cannot deliver to customer more than 10 blocks North");
-//		}
-//		if(customerLocationY < -10) {
-//			throw new CustomerException("Cannot deliver to customer more than 10 blocks South");
-//		}
+		this.customerLocationX = locationX;
+		this.customerLocationY = locationY;
 	}
 	
 	/**
@@ -67,7 +44,7 @@ public class DriverDeliveryCustomer extends Customer {
 	 */
 	@Override
 	public double getDeliveryDistance() {	
-		manhattanDistance = Math.abs(0 - customerLocationX) + Math.abs(0 - customerLocationY);
+		this.manhattanDistance = Math.abs(0 - this.customerLocationX) + Math.abs(0 - this.customerLocationY);
 		return manhattanDistance;
 	}
 

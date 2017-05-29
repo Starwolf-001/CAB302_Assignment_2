@@ -9,16 +9,16 @@ import org.junit.Test;
 
 import asgn2Customers.Customer;
 import asgn2Customers.CustomerFactory;
+import asgn2Customers.PickUpCustomer;
 import asgn2Exceptions.CustomerException;
 
 /**
  * @author Michael Cartwright
- *
  */
 public class CustomerFactoryTestsNew {
 
 	/**
-	 * Test methods for the CustomerFactory constructor
+	 * Test methods for the CustomerFactory
 	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
 	 * @throws CustomerException
 	 */
@@ -224,5 +224,13 @@ public class CustomerFactoryTestsNew {
 		Customer newCustomer = CustomerFactory.getCustomer("PUC", "!", "0412345678", 0, 0);
 		//Should never reach here
 		fail("Exception is expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerNameWhiteSpace() throws CustomerException {
+		//Create Customer
+		Customer newCustomer = CustomerFactory.getCustomer("PUC", "     ", "0412345678", 0, 0);
+		fail("Exception Expected");
 	}
 }

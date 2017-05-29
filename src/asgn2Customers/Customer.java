@@ -17,7 +17,7 @@ public abstract class Customer {
 	private int customerLocationX;
 	private int customerLocationY;
 	private String customerType;
-	private int customerNameLength;
+	private String whiteSpaceString = "";
 
 	/**
 	 *  This class represents a customer of the Pizza Palace restaurant.  A detailed description of the class's fields
@@ -49,8 +49,16 @@ public abstract class Customer {
 		if(customerName.length() < 1 || customerName.length() > 18) {
 			throw new CustomerException("customerName requires between 1 to 18 characters");
 		}
-		if(customerName.matches(" ")) {
-			throw new CustomerException("customerName cannot be filled with only white spaces");
+		for(int indexLength = 0; indexLength <= customerName.length(); indexLength++) {
+			if(indexLength == customerName.length()) {
+				if(customerName.matches(whiteSpaceString)) {
+					throw new CustomerException("customerName cannot be filled with only white spaces");
+				} else {
+					whiteSpaceString = "";
+				}
+			} else {
+				whiteSpaceString = whiteSpaceString + " ";
+			}
 		}
 		for(int indexLetter = 0; indexLetter < customerName.length(); indexLetter++) {
 			if(Character.isLetter(customerName.charAt(indexLetter)) || customerName.charAt(indexLetter) == ' ') {
