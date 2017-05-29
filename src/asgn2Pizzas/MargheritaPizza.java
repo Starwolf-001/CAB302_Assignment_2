@@ -20,6 +20,7 @@ public class MargheritaPizza extends Pizza {
 	private int pizzaQuantity;
 	private LocalTime pizzaOrderTime;
 	private LocalTime pizzaDeliveryTime;
+	private PizzaTopping toppingList[] = new PizzaTopping[]{PizzaTopping.CHEESE, PizzaTopping.TOMATO};
 	
 	/**
 	 * 

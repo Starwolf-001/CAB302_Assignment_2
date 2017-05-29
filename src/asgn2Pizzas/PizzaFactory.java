@@ -2,7 +2,6 @@ package asgn2Pizzas;
 
 import java.time.LocalTime;
 
-import asgn2Exceptions.CustomerException;
 import asgn2Exceptions.PizzaException;
 
 /**
@@ -29,25 +28,17 @@ public class PizzaFactory {
 	 * @return A valid Pizza object using the specified parameters 
 	 * */
 	public static Pizza getPizza(String pizzaCode, int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException{
-		String codeForPizza = pizzaCode;
-		int pizzaQuantity = quantity;
-		LocalTime pizzaOrderTime = orderTime;
-		LocalTime pizzaDeliveryTime = deliveryTime;
-		
-		if(codeForPizza != "PZM" && codeForPizza!= "PZV" && codeForPizza != "PZL") {
-			throw new CustomerException("Pizza code is not valid");
+		if(pizzaCode == "PZM") {
+			return new MargheritaPizza(quantity, orderTime, deliveryTime);
 		}
-		if(codeForPizza == "PZM") {
-			// TODO
-			return pizzaMargherita;
+		if(pizzaCode == "PZV") {
+			return new VegetarianPizza(quantity, orderTime, deliveryTime);
 		}
-		if(codeForPizza == "PZV") {
-			// TODO
-			return pizzaVegetarian;
+		if(pizzaCode == "PZL") {
+			return new MeatLoversPizza(quantity, orderTime, deliveryTime);
 		}
-		if(codeForPizza == "PZL") {
-			// TODO
-			return pizzaMeatLovers;
+		else {
+			throw new PizzaException("Pizza code is not valid");
 		}
 	}
 

@@ -26,6 +26,7 @@ public abstract class Pizza  {
 	private Double perPizzaCost;
 	private Double totalOrderPrice;
 	private Double totalOrderProfit;
+	private PizzaTopping toppingList[] = new PizzaTopping[]{};
 	
 	/**
 	 *  This class represents a pizza produced at the Pizza Palace restaurant.  A detailed description of the class's fields
@@ -88,17 +89,11 @@ public abstract class Pizza  {
 	 * <P> POST: The cost field is set to sum of the Pizzas's toppings
 	 */
 	public final void calculateCostPerPizza(){
-		if(pizzaType == "Margherita") {
-			// TODO ENUMS and public final boolean containsTopping(PizzaTopping topping)
-			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO);
-		}
-		if(pizzaType == "Vegetarian") {
-			// TODO ENUMS and public final boolean containsTopping(PizzaTopping topping)
-			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO, PizzaTopping.CAPSICUM, PizzaTopping.MUSHROOM, PizzaTopping.EGGPLANT);
-		}
-		if(pizzaType == "Meat Lovers") {
-			// TODO ENUMS and public final boolean containsTopping(PizzaTopping topping)
-			pizzaCost = containsTopping(PizzaTopping.CHEESE, PizzaTopping.TOMATO, PizzaTopping.BACON, PizzaTopping.SALAMI, PizzaTopping.PEPPERONI);
+		perPizzaCost = 0.0;
+		for(PizzaTopping element: toppingList) {
+			if(containsTopping(element)){
+				perPizzaCost += (Double)element.getCost();
+			}
 		}
 	}
 	
@@ -160,7 +155,12 @@ public abstract class Pizza  {
 	 * @return Returns  true if the instance of Pizza contains the specified topping and false otherwise.
 	 */
 	public final boolean containsTopping(PizzaTopping topping){
-		 // TODO
+		for (PizzaTopping element: toppingList) {
+			if(topping.equals(element)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
