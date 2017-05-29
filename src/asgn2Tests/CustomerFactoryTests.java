@@ -3,7 +3,8 @@ package asgn2Tests;
 /**
  * A class the that tests the asgn2Customers.CustomerFactory class.
  * 
- * @author A
+ * TODO To be updated with CustomerFactoryTestsNew content
+ * 		After which CustomerFactoryTestsNew should be deleted
  *
  */
 public class CustomerFactoryTests {
