@@ -360,6 +360,7 @@ public class CustomerTestsNew {
 
 	/**
 	 * Test method for getDeliveryDistance for Pick Up customer type
+	 * Expecting a delivery distance of 0
 	 * {@link asgn2Customers.Customer#getDeliveryDistance()}.
 	 * @throws CustomerException
 	 */
@@ -368,7 +369,7 @@ public class CustomerTestsNew {
 		//Create Customer
 		int locationX = 0;
 		int locationY = 0;
-		Customer newCustomer = new PickUpCustomer("C C", "0412345678", locationX, locationY);
+		Customer newCustomer = new PickUpCustomer("CC loves her pizza", "0412345678", locationX, locationY);
 		//Check 
 		if(newCustomer.getDeliveryDistance() == 0) {
 			assertTrue(true);
@@ -380,6 +381,7 @@ public class CustomerTestsNew {
 	
 	/**
 	 * Test method for getDeliveryDistance for Drone Delivery customer type
+	 * Expecting a delivery distance of 7.071068
 	 * {@link asgn2Customers.Customer#getDeliveryDistance()}.
 	 * @throws CustomerException
 	 */
@@ -389,9 +391,31 @@ public class CustomerTestsNew {
 		int locationX = 5;
 		int locationY = 5;
 		double euclideanDistance = Math.sqrt(Math.pow(0 - locationX, 2) + Math.pow(0 - locationY, 2));
-		Customer newCustomer = new DroneDeliveryCustomer("C C", "0412345678", locationX, locationY);
+		Customer newCustomer = new DroneDeliveryCustomer("CC loves her pizza", "0412345678", locationX, locationY);
 		//Check 
 		if(newCustomer.getDeliveryDistance() == euclideanDistance) {
+			assertTrue(true);
+		} else {
+			//Should never reach here
+			fail("Failed to obtain the same distance value. The euclideanDistance value should be 7.071068");
+		}
+	}
+	
+	/**
+	 * Test method for getDeliveryDistance for Driver Delivery customer type
+	 * Expecting a delivery distance of 10.0
+	 * {@link asgn2Customers.Customer#getDeliveryDistance()}.
+	 * @throws CustomerException
+	 */
+	@Test
+	public void testGetDeliveryDistanceDriverDelivery() throws CustomerException {
+		//Create Customer
+		int locationX = 5;
+		int locationY = 5;
+		double manhattanDistance = Math.abs(0 - locationX) + Math.abs(0 - locationY);
+		Customer newCustomer = new DriverDeliveryCustomer("CC loves her pizza", "0412345678", locationX, locationY);
+		//Check 
+		if(newCustomer.getDeliveryDistance() == manhattanDistance) {
 			assertTrue(true);
 		} else {
 			//Should never reach here
@@ -401,10 +425,8 @@ public class CustomerTestsNew {
 
 	/**
 	 * Test method for {@link asgn2Customers.Customer#equals(java.lang.Object)}.
-	 */
-	//@Test
-	//public void testEqualsObject() {
-	//	fail("Not yet implemented");
-	//}
+	 * EqualsObject() does not need to be tested
+	 **/
+	
 
 }
