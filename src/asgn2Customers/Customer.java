@@ -52,8 +52,7 @@ public abstract class Customer {
 		if(customerName.matches(" ")) {
 			throw new CustomerException("customerName cannot be filled with only white spaces");
 		}
-		customerNameLength = customerName.length();
-		for(int indexLetter = 0; indexLetter >= customerNameLength; indexLetter++) {
+		for(int indexLetter = 0; indexLetter < customerName.length(); indexLetter++) {
 			if(Character.isLetter(customerName.charAt(indexLetter)) || customerName.charAt(indexLetter) == ' ') {
 				// Do nothing as character is a letter or space
 			} else {
@@ -72,7 +71,7 @@ public abstract class Customer {
 		if(customerMobileNumber.charAt(1) != '4') {
 			throw new CustomerException("customerMobileNumber second figure must be 4");
 		}
-		for(int indexDigit = 0; indexDigit >= 10; indexDigit++) {
+		for(int indexDigit = 0; indexDigit < 10; indexDigit++) {
 			if(Character.isDigit(customerMobileNumber.charAt(indexDigit))) {
 				// Do nothing as character is a digit
 			} else {

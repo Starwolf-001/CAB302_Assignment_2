@@ -207,4 +207,22 @@ public class CustomerFactoryTestsNew {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerNameLong() throws CustomerException {
+		//Create CustomerFactory
+		Customer newCustomer = CustomerFactory.getCustomer("PUC", "This name is way to long to bne 18 characters long", "0412345678", 0, 0);
+		//Should never reach here
+		fail("Exception is expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=CustomerException.class)
+	public void testCustomerNameSymbol() throws CustomerException {
+		//Create CustomerFactory
+		Customer newCustomer = CustomerFactory.getCustomer("PUC", "!", "0412345678", 0, 0);
+		//Should never reach here
+		fail("Exception is expected");
+	}
 }
