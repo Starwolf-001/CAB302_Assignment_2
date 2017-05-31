@@ -2,9 +2,11 @@ package asgn2Restaurant;
 
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import asgn2Customers.Customer;
 import asgn2Customers.CustomerFactory;
@@ -20,7 +22,7 @@ import asgn2Pizzas.PizzaFactory;
  * and Customer object - either as an individual Pizza/Customer object or as an
  * ArrayList of Pizza/Customer objects.
  * 
- * @author Matthew Pike
+ * @author Matthew Pike and Michael Cartwright
  *
  */
 public class LogHandler {
@@ -36,21 +38,16 @@ public class LogHandler {
 	 */
 	public static ArrayList<Customer> populateCustomerDataset(String filename) throws CustomerException, LogHandlerException{
 		ArrayList<Customer> result = new ArrayList<Customer>();
-		
-		String file = filename;
-		try(BufferedReader br = new BufferedReader(new FileReader(file))){
-			StringBuilder sb = new StringBuilder();
-			String line = br.readLine();
-			
-			while (line != null){
-				sb.append(line);
-				sb.append(System.lineSeparator());
-				line = br.readLine();
+        File file = new File(filename);
+		try{
+			Scanner scan = new Scanner(file);
+			while(scan.hasNextLine()){
+				String line = scan.nextLine();
 				result.add(createCustomer(line));
 			}
 		} 
 		catch (Exception e){
-			throw new LogHandlerException();
+			throw new LogHandlerException(e);
 		}
 		return result;
 	}		
@@ -66,15 +63,11 @@ public class LogHandler {
 	public static ArrayList<Pizza> populatePizzaDataset(String filename) throws PizzaException, LogHandlerException{
 		ArrayList<Pizza> result = new ArrayList<Pizza>();
 		
-		String file = filename;
-		try(BufferedReader br = new BufferedReader(new FileReader(file))){
-			StringBuilder sb = new StringBuilder();
-			String line = br.readLine();
-			
-			while (line != null){
-				sb.append(line);
-				sb.append(System.lineSeparator());
-				line = br.readLine();
+		File file = new File(filename);
+		try{
+			Scanner scan = new Scanner(file);
+			while(scan.hasNextLine()){
+				String line = scan.nextLine();
 				result.add(createPizza(line));
 			}
 		} 
