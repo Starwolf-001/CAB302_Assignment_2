@@ -25,6 +25,10 @@ public abstract class Customer {
 	 *  A CustomerException is thrown if the any of the constraints listed in Section 5.2 of the Assignment Specification
 	 *  are violated. 
 	 *  
+	 *  Assumption 1: English US or UK characters are used for people's names.
+	 *  Assumption 2: Valid characters in customer name are capital letters, lower case letters, spaces, hyphens or apostrophes.
+	 *  Assumption 3: Any other character is considered invalid.
+	 *  
   	 * <P> PRE: True
   	 * <P> POST: All field values are set
   	 * 
@@ -61,10 +65,13 @@ public abstract class Customer {
 			}
 		}
 		for(int indexLetter = 0; indexLetter < customerName.length(); indexLetter++) {
-			if(Character.isLetter(customerName.charAt(indexLetter)) || customerName.charAt(indexLetter) == ' ') {
+			// Checks to for a valid letter, space, hyphen or apostrophe(ANSI value of 39) character.
+			if(Character.isLetter(customerName.charAt(indexLetter)) || customerName.charAt(indexLetter) == ' ' ||
+			   customerName.charAt(indexLetter) == '-' || customerName.charAt(indexLetter) == 39) {
 				// Do nothing as character is a letter or space
 			} else {
-				throw new CustomerException("customerName cannot contain numeric digits");
+				throw new CustomerException("customerName cannot contain numeric digits or invalid symbol character"
+										    + " was used");
 			}
 		}
 		if(customerMobileNumber == "" || customerMobileNumber == null) {
@@ -75,9 +82,6 @@ public abstract class Customer {
 		}
 		if(customerMobileNumber.charAt(0) != '0') {
 			throw new CustomerException("customerMobileNumber must start with a 0");
-		}
-		if(customerMobileNumber.charAt(1) != '4') {
-			throw new CustomerException("customerMobileNumber second figure must be 4");
 		}
 		for(int indexDigit = 0; indexDigit < 10; indexDigit++) {
 			if(Character.isDigit(customerMobileNumber.charAt(indexDigit))) {

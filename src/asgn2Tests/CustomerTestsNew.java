@@ -109,14 +109,6 @@ public class CustomerTestsNew {
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
-	public void testCustomerMobileNumberIncorrectSecond() throws CustomerException {
-		//Create Customer
-		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "0112345678", 0, 0);
-		fail("Exception Expected");
-	}
-	
-	// Expecting an exception
-	@Test(expected=CustomerException.class)
 	public void testCustomerMobileNumberNonDigit() throws CustomerException {
 		//Create Customer
 		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "04S0000000", 0, 0);

@@ -151,15 +151,6 @@ public class CustomerFactoryTestsNew {
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
-	public void testCustomerMobileNumberIncorrectSecondNumber() throws CustomerException {
-		//Create CustomerFactory
-		Customer newCustomer = CustomerFactory.getCustomer("PUC", "Michael Cartwright", "0112345678", 0, 0);
-		//Should never reach here
-		fail("Exception is expected");
-	}
-	
-	// Expecting an exception
-	@Test(expected=CustomerException.class)
 	public void testCustomerMobileNumberWithAlphabet() throws CustomerException {
 		//Create CustomerFactory
 		Customer newCustomer = CustomerFactory.getCustomer("PUC", "Michael Cartwright", "0ABCDEFGHI", 0, 0);
