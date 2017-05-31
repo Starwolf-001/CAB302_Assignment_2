@@ -22,7 +22,7 @@ import org.junit.Test;
 public class LogHandlerCustomerTestsNew {
 
 	/**
-	 * Test method for populating customers
+	 * Test method for populating, creating and validating that customer
 	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
 	 * @throws CustomerException, LogHandlerException
 	 */
