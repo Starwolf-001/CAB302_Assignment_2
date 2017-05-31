@@ -40,26 +40,6 @@ public class MargheritaPizza extends Pizza {
 	 */
 	public MargheritaPizza(int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException {
 		super(quantity, orderTime, deliveryTime, "Margherita", 8);
-		
-		if(pizzaQuantity <= 0) {
-			throw new PizzaException("Pizza quantity cannot be less than or equal to 0.");
-		}
-		if(pizzaQuantity > 10) {
-			throw new PizzaException("Pizza quantity cannot be more than 10.");
-		}
-		if(pizzaOrderTime.getHour() < 19) {
-			throw new PizzaException("Pizza cannot be ordered before Pizza Palace has opened.");
-		}
-		if(pizzaOrderTime.getHour() >= 23) {
-			throw new PizzaException("Pizza cannot be ordered after Pizza Palace has closed.");
-		}
-		if(pizzaOrderTime == null) {
-			throw new PizzaException("Order time cannot be NULL.");
-		}
-		// TODO need to further investigate
-		if(pizzaDeliveryTime == null) {
-			throw new PizzaException("Delivery Time cannot be NULL.");
-		}
 	}
 
 }

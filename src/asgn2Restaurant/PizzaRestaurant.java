@@ -54,8 +54,8 @@ public class PizzaRestaurant {
      *
 	 */
 	public boolean processLog(String filename) throws CustomerException, PizzaException, LogHandlerException{
-		LogHandler.populateCustomerDataset(filename);
-		LogHandler.populatePizzaDataset(filename);
+		customers = LogHandler.populateCustomerDataset(filename);
+		pizzas = LogHandler.populatePizzaDataset(filename);
 		return true;
 	}
 
@@ -66,7 +66,15 @@ public class PizzaRestaurant {
 	 * @throws CustomerException if index is invalid.
 	 */
 	public Customer getCustomerByIndex(int index) throws CustomerException{
-		return customers.get(index);
+		if(customers.size() == 0) {
+			throw new CustomerException("There are no customers");
+		} else if(index < 0) {
+			throw new CustomerException("Cannot have an index of less than zero");
+		} else if(index >= customers.size()) {
+			throw new CustomerException("Index value is greater than the number of customers");
+		} else {
+			return customers.get(index);
+		}
 	}
 	
 	/**
@@ -76,7 +84,15 @@ public class PizzaRestaurant {
 	 * @throws PizzaException if index is invalid.
 	 */	
 	public Pizza getPizzaByIndex(int index) throws PizzaException{
-		return pizzas.get(index);
+		if(pizzas.size() == 0) {
+			throw new PizzaException("There are no customers");
+		} else if(index < 0) {
+			throw new PizzaException("Cannot have an index of less than zero");
+		} else if(index >= pizzas.size()) {
+			throw new PizzaException("Index value is greater than the number of customers");
+		} else {
+			return pizzas.get(index);
+		}
 	}
 	
 	/**

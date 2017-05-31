@@ -72,7 +72,7 @@ public class LogHandler {
 			}
 		} 
 		catch (Exception e){
-			throw new LogHandlerException();
+			throw new LogHandlerException(e);
 		}
 		return result;
 	}		
