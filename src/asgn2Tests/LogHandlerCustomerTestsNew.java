@@ -21,7 +21,7 @@ import org.junit.Test;
 public class LogHandlerCustomerTestsNew {
 
 	/**
-	 * Test method for populating, creating and validating customer(s)
+	 * Test method for populateCustomerDataset
 	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
 	 * @throws CustomerException, LogHandlerException
 	 */
@@ -31,7 +31,7 @@ public class LogHandlerCustomerTestsNew {
 	public void testPopulateSingleCustomerDataset() throws CustomerException, LogHandlerException {
 		String file = "logs/testPopulate.txt";
 		ArrayList<Customer> resultCheck = new ArrayList<Customer>();
-		resultCheck.add(CustomerFactory.getCustomer("DVC", "Casey Jones", "0423456789", 5,  5));
+		resultCheck.add(CustomerFactory.getCustomer("DVC", "Casey Jones", "0423456789", 5, 5));
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		if(result.equals(resultCheck)){
 			assertTrue(true);
@@ -46,9 +46,9 @@ public class LogHandlerCustomerTestsNew {
 	public void testPopulateMultipleCustomerDataset() throws CustomerException, LogHandlerException {
 		String file = "logs/testPopulateMultiple.txt";
 		ArrayList<Customer> resultCheck = new ArrayList<Customer>();
-		resultCheck.add(CustomerFactory.getCustomer("DVC", "Casey Jones", "0423456789", 5,  5));
-		resultCheck.add(CustomerFactory.getCustomer("DNC", "April ONeal", "0487654321", 3,  4));
-		resultCheck.add(CustomerFactory.getCustomer("PUC", "Oroku Saki", "0411222333", 0,  0));
+		resultCheck.add(CustomerFactory.getCustomer("DVC", "Casey Jones", "0423456789", 5, 5));
+		resultCheck.add(CustomerFactory.getCustomer("DNC", "April ONeal", "0487654321", 3, 4));
+		resultCheck.add(CustomerFactory.getCustomer("PUC", "Oroku Saki", "0411222333", 0, 0));
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		if(result.get(0).equals(resultCheck.get(0)) && result.get(1).equals(resultCheck.get(1)) &&
 		   result.get(2).equals(resultCheck.get(2))){
@@ -64,9 +64,9 @@ public class LogHandlerCustomerTestsNew {
 	public void testFirstLogFile() throws CustomerException, LogHandlerException {
 		String file = "logs/20170101.txt";
 		ArrayList<Customer> resultCheck = new ArrayList<Customer>();
-		resultCheck.add(CustomerFactory.getCustomer("DVC", "Casey Jones", "0123456789", 5,  5));
-		resultCheck.add(CustomerFactory.getCustomer("DNC", "April O'Neal", "0987654321", 3,  4));
-		resultCheck.add(CustomerFactory.getCustomer("PUC", "Oroku Saki", "0111222333", 0,  0));
+		resultCheck.add(CustomerFactory.getCustomer("DVC", "Casey Jones", "0123456789", 5, 5));
+		resultCheck.add(CustomerFactory.getCustomer("DNC", "April O'Neal", "0987654321", 3, 4));
+		resultCheck.add(CustomerFactory.getCustomer("PUC", "Oroku Saki", "0111222333", 0, 0));
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		if(result.get(0).equals(resultCheck.get(0)) && result.get(1).equals(resultCheck.get(1)) &&
 		   result.get(2).equals(resultCheck.get(2))){
@@ -240,7 +240,7 @@ public class LogHandlerCustomerTestsNew {
 	}
 
 	/**
-	 * Test method for creating customer
+	 * Test method for createCustomer
 	 * {@link asgn2Restaurant.LogHandler#createCustomer(java.lang.String)}.
 	 * @throws CustomerException, LogHandlerException
 	 * @throws LogHandlerException 

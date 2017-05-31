@@ -17,7 +17,7 @@ import asgn2Pizzas.Pizza;
  *  Any exceptions raised by one of the methods called by this class should be passed to asgn2GUIs.PizzaGUI so that it can be shown to
  *  the user.
  * 
- * @author Person A and Person B
+ * @author Matthew Pike and Michael Cartwright
  *
  */
 public class PizzaRestaurant {
@@ -25,7 +25,6 @@ public class PizzaRestaurant {
 	private ArrayList<Customer> customers;
 	private ArrayList<Pizza> pizzas;
 
-	
 	/**
 	 * Creates an instance of the PizzaRestaurant and sets the customers and pizzas fields to
 	 * an appropriate initial empty state. 
@@ -37,7 +36,6 @@ public class PizzaRestaurant {
 	public PizzaRestaurant() {
 		customers = new ArrayList<Customer>();
 		pizzas = new ArrayList<Pizza>();
-		
 	}
 
 	/**
@@ -101,8 +99,6 @@ public class PizzaRestaurant {
 		return customers.size();
 	}
 
-			
-	
 	/**
 	 * Returns the total delivery distance for all of the customers.
 	 * 
@@ -138,7 +134,5 @@ public class PizzaRestaurant {
 	public void resetDetails(){
 		customers.clear();
 		pizzas.clear();
-		
 	}
-
 }
