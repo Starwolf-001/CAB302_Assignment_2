@@ -173,12 +173,12 @@ public class CustomerFactoryTestsNew {
 	}
 	
 	// Expecting an exception
-		@Test(expected=CustomerException.class)
-		public void testCustomerNameEmpty() throws CustomerException {
-			//Create CustomerFactory
-			Customer newCustomer = CustomerFactory.getCustomer("PUC", "", "0412345678", 0, 0);
-			//Should never reach here
-			fail("Exception is expected");
+	@Test(expected=CustomerException.class)
+	public void testCustomerNameEmpty() throws CustomerException {
+		//Create CustomerFactory
+		Customer newCustomer = CustomerFactory.getCustomer("PUC", "", "0412345678", 0, 0);
+		//Should never reach here
+		fail("Exception is expected");
 	}
 		
 	// Expecting an exception
