@@ -30,7 +30,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * You can also use this class and asgn2Wizards.PizzaWizard to test your system as a whole
  * 
  * 
- * @author Person A and Person B
+ * @author Matthew Pike
  *
  */
 public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionListener {

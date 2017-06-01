@@ -10,7 +10,7 @@ import asgn2GUIs.PizzaGUI;
  * At the moment, this just calls the asgn2GUIs.PizzaGUI class. You can probably leave the class as it is,
  *  however, you must make sure that it is the one and only entry point to the rest of the system. 
  *  
- *  @author Person A and Person B
+ *  @author Michael Cartwright and Matthew Pike
  */
 
 public class PizzaWizard {
@@ -26,8 +26,7 @@ public class PizzaWizard {
 	 * @param args Command Line Arguments
 	 */
 	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new PizzaGUI("Pizza Place"));		
-		
+		SwingUtilities.invokeLater(new PizzaGUI("Pizza Place"));
 	}
 
 }

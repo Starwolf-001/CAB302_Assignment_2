@@ -2,7 +2,6 @@ package asgn2Pizzas;
 
 import java.time.LocalTime;
 
-import asgn2Exceptions.CustomerException;
 import asgn2Exceptions.PizzaException;
 
 
