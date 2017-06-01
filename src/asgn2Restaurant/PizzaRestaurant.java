@@ -22,8 +22,8 @@ import asgn2Pizzas.Pizza;
  */
 public class PizzaRestaurant {
 
-	private ArrayList<Customer> customers;
-	private ArrayList<Pizza> pizzas;
+	private static ArrayList<Customer> customers;
+	private static ArrayList<Pizza> pizzas;
 
 	/**
 	 * Creates an instance of the PizzaRestaurant and sets the customers and pizzas fields to
@@ -53,9 +53,11 @@ public class PizzaRestaurant {
 	 * @throws LogHandlerException If there was a problem with the log file not related to the semantic errors above (passed by another class).
      *
 	 */
-	public boolean processLog(String filename) throws CustomerException, PizzaException, LogHandlerException{
+	public static boolean processLog(String filename) throws CustomerException, PizzaException, LogHandlerException {
+		
 		customers = LogHandler.populateCustomerDataset(filename);
 		pizzas = LogHandler.populatePizzaDataset(filename);
+		
 		return true;
 	}
 
@@ -65,7 +67,7 @@ public class PizzaRestaurant {
 	 * @return The Customer object located at the specified index.
 	 * @throws CustomerException if index is invalid.
 	 */
-	public Customer getCustomerByIndex(int index) throws CustomerException{
+	public static Customer getCustomerByIndex(int index) throws CustomerException{
 		if(customers.size() == 0) {
 			throw new CustomerException("There are no customers");
 		} else if(index < 0) {
@@ -111,7 +113,7 @@ public class PizzaRestaurant {
 	 * 
 	 * @return the number of objects contained in the customers field.
 	 */
-	public int getNumCustomerOrders(){
+	public static int getNumCustomerOrders(){
 		return customers.size();
 	}
 

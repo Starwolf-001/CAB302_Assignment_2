@@ -7,17 +7,18 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.text.DecimalFormat;
 
-import javax.swing.JPanel;
 import javax.swing.text.DefaultCaret;
 
 import asgn2Customers.Customer;
+import asgn2Exceptions.CustomerException;
+import asgn2Exceptions.LogHandlerException;
+import asgn2Exceptions.PizzaException;
 import asgn2Pizzas.Pizza;
 import asgn2Restaurant.PizzaRestaurant;
 
-import javax.swing.JFrame;
-
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 /**
@@ -42,13 +43,84 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 	 * @param title - The title for the supertype JFrame
 	 */
 	public PizzaGUI(String title) {
-		// TO DO
+		
+		super(title);
+		String[] columnCustomers = {
+				"Customer Name",
+				"Mobile Number",
+				"Customer Type",
+				"X Location",
+				"Y Location",
+				"Delivery Distance"
+		};
+		
+		String[] columnPizzas = {
+				"Pizza Type",
+				"Quantity",
+				"Order Price",
+				"Order Cost",
+				"Order Profit"
+		};
+		
+		Object[][] dataCustomers = null;
+		Object[][] dataPizzas = null;
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		
+		final JFileChooser fc = new JFileChooser();
+		FileNameExtensionFilter filter = new FileNameExtensionFilter(
+	        "Text Files", "txt");
+	    fc.setFileFilter(filter);
+		int returnVal = fc.showOpenDialog(this);
+		String filename = null;
+		if(returnVal==JFileChooser.APPROVE_OPTION){
+			File file = fc.getSelectedFile();
+			filename = file.getAbsolutePath();
+		} else if (returnVal==JFileChooser.CANCEL_OPTION){
+			System.exit(1);
+		}
+
+		try {
+			PizzaRestaurant.processLog(filename);
+		} 
+		catch (CustomerException | PizzaException | LogHandlerException e) {
+			
+		}
+		
+		JTable customer = new JTable(dataCustomers, columnCustomers);
+		JTable pizza = new JTable(dataPizzas, columnPizzas);
+		
+		
+		JTabbedPane pane = new JTabbedPane();
+		JPanel panel1 = new JPanel();
+		panel1.add(customer);
+		JPanel panel2 = new JPanel();
+		panel2.add(new JButton("Tab 2"));
+		
+		pane.add("testing", panel1);
+		pane.add("testing2", panel2);
+		getContentPane().add(pane);
+		
+		setPreferredSize(new Dimension (400, 500));
+		setLocation(new Point(500, 100));
+		pack();
+		setVisible(true);
+		
 	}
 
 	
 	@Override
 	public void run() {
 		// TO DO
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
