@@ -17,9 +17,6 @@ import asgn2Exceptions.PizzaException;
  */
 public class MargheritaPizza extends Pizza {
 	
-	private int pizzaQuantity;
-	private LocalTime pizzaOrderTime;
-	private LocalTime pizzaDeliveryTime;
 	private PizzaTopping toppingList[] = new PizzaTopping[]{PizzaTopping.CHEESE, PizzaTopping.TOMATO};
 	
 	/**
@@ -40,6 +37,7 @@ public class MargheritaPizza extends Pizza {
 	 */
 	public MargheritaPizza(int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException {
 		super(quantity, orderTime, deliveryTime, "Margherita", 8);
+		super.calculateCostPerPizza(this.toppingList);
 	}
 
 }

@@ -58,6 +58,12 @@ public abstract class Pizza  {
 		if(pizzaQuantity > 10) {
 			throw new PizzaException("Pizza quantity cannot be more than 10");
 		}
+		if(pizzaOrderTime == null || pizzaOrderTime.equals("")) {
+			throw new PizzaException("Order time cannot be NULL");
+		}
+		if(pizzaDeliveryTime == null || pizzaDeliveryTime.equals("")) {
+			throw new PizzaException("Delivery time cannot be NULL");
+		}
 		if(pizzaOrderTime.getHour() < 19) {
 			throw new PizzaException("Pizza cannot be ordered before Pizza Palace has opened");
 		}
@@ -82,17 +88,11 @@ public abstract class Pizza  {
 			throw new PizzaException("Pizza's deliveryTime indicates pizza was not delivered or pickup"
 					                 + " up more than 1 hour since orderTime");
 		}
-		if(pizzaOrderTime == null) {
-			throw new PizzaException("Order time cannot be NULL");
-		}
-		if(pizzaDeliveryTime == null) {
-			throw new PizzaException("Delivery time cannot be NULL");
-		}
 		if(pizzaType == "" || pizzaType == null) {
 			throw new PizzaException("Pizza type cannot be an empty string or NULL");
 		}
 		if(perPizzaPrice < 0) {
-			throw new PizzaException("Pizza quantity cannot be less than $0.00");
+			throw new PizzaException("Pizza price cannot be less than $0.00");
 		}
 	}
 
@@ -102,9 +102,10 @@ public abstract class Pizza  {
      * <P> PRE: TRUE
 	 * <P> POST: The cost field is set to sum of the Pizzas's toppings
 	 */
-	public final void calculateCostPerPizza(){
+	public final void calculateCostPerPizza(PizzaTopping inToppingList[]){
 		perPizzaCost = 0.0;
-		for(PizzaTopping element: toppingList) {
+		this.toppingList = inToppingList;
+		for(PizzaTopping element: this.toppingList) {
 			if(containsTopping(element)){
 				perPizzaCost += (Double)element.getCost();
 			}
@@ -116,7 +117,7 @@ public abstract class Pizza  {
 	 * @return The amount that an individual pizza costs to make.
 	 */
 	public final double getCostPerPizza(){
-		return perPizzaCost;
+		return this.perPizzaCost;
 	}
 
 	/**
@@ -124,7 +125,7 @@ public abstract class Pizza  {
 	 * @return The amount that an individual pizza is sold to the customer.
 	 */
 	public final double getPricePerPizza(){
-		return perPizzaPrice;
+		return this.perPizzaPrice;
 	}
 
 	/**
@@ -132,7 +133,8 @@ public abstract class Pizza  {
 	 * @return The amount that the entire order costs to make, taking into account the type and quantity of pizzas. 
 	 */
 	public final double getOrderCost(){
-		return totalOrderCost;
+		this.totalOrderCost = this.getQuantity() * this.getCostPerPizza();
+		return this.totalOrderCost;
 	}
 	
 	/**
@@ -140,15 +142,8 @@ public abstract class Pizza  {
 	 * @return The amount that the entire order is sold to the customer, taking into account the type and quantity of pizzas. 
 	 */
 	public final double getOrderPrice(){
-		// TODO foreach pizza the price times the quantity
-		//      Sum of total foreach pizza
-		//      Sum of combined total
-		
-		// double currentPizzaPrice = pizza.getPricePerPizza();
-		// int currentPizzaQuantity = pizza.getQuantity();
-		// double total = currentPizzaPrice * currentPizzaQuantity;
-		// totalCombinedPrice = currentPizza.total + otherPizza.total;
-		return totalOrderPrice;
+		this.totalOrderPrice = this.getQuantity() * this.getPricePerPizza();
+		return this.totalOrderPrice;
 	}
 	
 	
@@ -157,9 +152,8 @@ public abstract class Pizza  {
 	 * @return  Returns the profit made by the restaurant on the order which is the order price minus the order cost.
 	 */
 	public final double getOrderProfit(){
-		// TODO What is the profit per pizza?
-		//      Does profit change with different quantity ratios?
-		return totalOrderProfit;
+		this.totalOrderProfit = this.getOrderPrice() - this.getOrderCost();
+		return this.totalOrderProfit;
 	}
 	
 
@@ -169,7 +163,7 @@ public abstract class Pizza  {
 	 * @return Returns  true if the instance of Pizza contains the specified topping and false otherwise.
 	 */
 	public final boolean containsTopping(PizzaTopping topping){
-		for (PizzaTopping element: toppingList) {
+		for (PizzaTopping element: this.toppingList) {
 			if(topping.equals(element)) {
 				return true;
 			}
@@ -182,7 +176,7 @@ public abstract class Pizza  {
 	 * @return the quantity of pizzas ordered. 
 	 */
 	public final int getQuantity(){
-		return pizzaQuantity;
+		return this.pizzaQuantity;
 	}
 
 	/**
@@ -191,7 +185,7 @@ public abstract class Pizza  {
 	 * @return A human understandable description of the Pizza's type.
 	 */
 	public final String getPizzaType(){
-		return pizzaType;
+		return this.pizzaType;
 	}
 
 	/**

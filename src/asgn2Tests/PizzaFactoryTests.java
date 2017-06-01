@@ -148,9 +148,18 @@ public class PizzaFactoryTests {
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryOrderTimeNull() throws PizzaException {
 		//Create PizzaFactory
-		LocalTime orderTime = LocalTime.parse(null);
 		LocalTime deliveryTime = LocalTime.parse("19:20:00");
-		Pizza newPizzaPZM = PizzaFactory.getPizza("PZM", 1, orderTime, deliveryTime);
+		Pizza newPizzaPZM = PizzaFactory.getPizza("PZM", 1, null, deliveryTime);
+		//Expecting exception
+		fail("Exception is expected");
+	}
+	
+	// Expecting an exception
+	@Test(expected=PizzaException.class)
+	public void testPizzaFactoryDeliveryTimeNull() throws PizzaException {
+		//Create PizzaFactory
+		LocalTime orderTime = LocalTime.parse("19:20:00");
+		Pizza newPizzaPZM = PizzaFactory.getPizza("PZM", 1, orderTime, null);
 		//Expecting exception
 		fail("Exception is expected");
 	}

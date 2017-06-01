@@ -15,10 +15,7 @@ import asgn2Exceptions.PizzaException;
  *
  */
 public class VegetarianPizza extends Pizza {
-	
-	private int pizzaQuantity;
-	private LocalTime pizzaOrderTime;
-	private LocalTime pizzaDeliveryTime;
+
 	private PizzaTopping toppingList[] = new PizzaTopping[]{PizzaTopping.CHEESE, PizzaTopping.TOMATO, 
 															PizzaTopping.EGGPLANT, PizzaTopping.MUSHROOM,
 															PizzaTopping.CAPSICUM};
@@ -40,6 +37,7 @@ public class VegetarianPizza extends Pizza {
 	 */
 	public VegetarianPizza(int quantity, LocalTime orderTime, LocalTime deliveryTime) throws PizzaException {
 		super(quantity, orderTime, deliveryTime, "Vegetarian", 10);
+		super.calculateCostPerPizza(this.toppingList);
 	}
 
 }
