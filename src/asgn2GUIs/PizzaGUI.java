@@ -62,8 +62,8 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 				"Order Profit"
 		};
 		
-		Object[][] dataCustomers = null;
-		Object[][] dataPizzas = null;
+		Object[][] dataCustomers = {{"Matthew", "0412345678", "PUC", new Integer(4), new Integer(5), new Integer(0)}};
+		Object[][] dataPizzas = {{"PZL", new Integer(2), new Integer(4), new Integer(3), new Integer(1)}};
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -97,13 +97,13 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 		JPanel panel1 = new JPanel();
 		panel1.add(customer);
 		JPanel panel2 = new JPanel();
-		panel2.add(new JButton("Tab 2"));
+		panel2.add(pizza);
 		
 		pane.add("testing", panel1);
 		pane.add("testing2", panel2);
 		getContentPane().add(pane);
 		
-		setPreferredSize(new Dimension (400, 500));
+		setPreferredSize(new Dimension (500, 300));
 		setLocation(new Point(500, 100));
 		pack();
 		setVisible(true);
