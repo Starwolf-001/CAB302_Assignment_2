@@ -79,10 +79,9 @@ public class LogHandlerCustomerTests {
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
-	public void testCustomerNoSuchFailName() throws CustomerException, LogHandlerException {
+	public void testCustomerNoSuchFileName() throws CustomerException, LogHandlerException {
 		String file = "logs/thisFileDoesNotExist.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -91,7 +90,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerCodeInvalid() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerCode.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -100,7 +98,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerNameInvalidSymbol() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerNameSymbol.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -109,7 +106,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerNameEmpty() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerNameEmpty.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -118,7 +114,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerNameLong() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerNameLong.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -127,7 +122,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerNameDigits() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerNameDigits.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -136,7 +130,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerMobileStartingWithOne() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerMobileStartingWithOne.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -145,7 +138,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerMobileNonDigit() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerMobileNonDigit.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -154,7 +146,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerMobileShort() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerMobileShort.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -163,7 +154,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerMobileLong() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerMobileLong.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -172,7 +162,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerMobileEmpty() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerMobileEmpty.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -181,7 +170,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerInvalidPickUp() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerInvalidPickUp.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -190,7 +178,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerInvalidDroneAtPizzaPalace() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerInvalidDroneAtPizzaPalace.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -199,7 +186,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerInvalidDroneUpperXBound() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerInvalidDroneUpperXBound.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -208,7 +194,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerInvalidDroneLowerXBound() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerInvalidDroneLowerXBound.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -217,7 +202,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerInvalidDroneUpperYBound() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerInvalidDroneUpperYBound.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 		
@@ -226,7 +210,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerInvalidDroneLowerYBound() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerInvalidDroneLowerYBound.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 	
@@ -235,7 +218,6 @@ public class LogHandlerCustomerTests {
 	public void testCustomerInvalidLocationXDoubleVariable() throws CustomerException, LogHandlerException {
 		String file = "logs/failCustomerInvalidLocationXDoubleVariable.txt";
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
-		//Should never reach here
 		fail("Exception is expected");
 	}
 

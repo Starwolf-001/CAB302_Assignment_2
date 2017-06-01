@@ -1,9 +1,6 @@
 package asgn2Restaurant;
 
-
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Scanner;
