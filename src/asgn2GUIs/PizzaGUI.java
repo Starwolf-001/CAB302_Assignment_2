@@ -1,9 +1,12 @@
 package asgn2GUIs;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
-
-
 import java.awt.event.ActionListener;
+
+
 import java.io.File;
 import java.text.DecimalFormat;
 
@@ -16,7 +19,7 @@ import asgn2Exceptions.PizzaException;
 import asgn2Pizzas.Pizza;
 import asgn2Restaurant.PizzaRestaurant;
 
-import java.awt.*;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -30,7 +33,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * You can also use this class and asgn2Wizards.PizzaWizard to test your system as a whole
  * 
  * 
- * @author Matthew Pike
+ * @author Matthew Pike and Michael Cartwright
  *
  */
 public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionListener {
@@ -113,7 +116,7 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 	
 	@Override
 	public void run() {
-		// TO DO
+		//createGUI();
 	}
 
 
@@ -122,7 +125,4 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 		// TODO Auto-generated method stub
 		
 	}
-
-	
-
 }
