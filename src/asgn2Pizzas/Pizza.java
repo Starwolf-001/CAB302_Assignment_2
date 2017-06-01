@@ -64,15 +64,29 @@ public abstract class Pizza  {
 		if(pizzaOrderTime.getHour() >= 23) {
 			throw new PizzaException("Pizza cannot be ordered after Pizza Palace has closed");
 		}
+		if(pizzaDeliveryTime == pizzaOrderTime) {
+			throw new PizzaException("Delivery Time cannot be the same time as pizzaOrderTime");
+		}
+		if(pizzaDeliveryTime.getHour() < pizzaOrderTime.getHour()) {
+			throw new PizzaException("Delivery Time cannot be the earlier than pizzaOrderTime");
+		}
+		if(pizzaDeliveryTime.getHour() == pizzaOrderTime.getHour() && pizzaDeliveryTime.getMinute() < pizzaOrderTime.getMinute()) {
+			throw new PizzaException("Delivery Time cannot be the earlier than pizzaOrderTime");
+		}
+		if(pizzaDeliveryTime.getMinute() < pizzaOrderTime.getMinute() + 10) {
+			throw new PizzaException("Delivery Time must be at least 10 minutes more than orderTime due to 10 minute"
+							         + "cooking time");
+		}
+		if(pizzaDeliveryTime.getHour() > pizzaOrderTime.getHour() && pizzaDeliveryTime.getMinute() >= 
+		   pizzaOrderTime.getMinute() && pizzaDeliveryTime.getSecond() > pizzaOrderTime.getSecond()) {
+			throw new PizzaException("Pizza's deliveryTime indicates pizza was not delivered or pickup"
+					                 + " up more than 1 hour since orderTime");
+		}
 		if(pizzaOrderTime == null) {
 			throw new PizzaException("Order time cannot be NULL");
 		}
-		// TODO need to further investigate
 		if(pizzaDeliveryTime == null) {
-			throw new PizzaException("Delivery Time cannot be NULL");
-		}
-		if(pizzaDeliveryTime == pizzaOrderTime) {
-			throw new PizzaException("Delivery Time cannot be the same tiem as pizzaOrderTime");
+			throw new PizzaException("Delivery time cannot be NULL");
 		}
 		if(pizzaType == "" || pizzaType == null) {
 			throw new PizzaException("Pizza type cannot be an empty string or NULL");
