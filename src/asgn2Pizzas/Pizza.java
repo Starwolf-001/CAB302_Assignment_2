@@ -78,9 +78,15 @@ public abstract class Pizza  {
 		if(pizzaDeliveryTime.getHour() == pizzaOrderTime.getHour() && pizzaDeliveryTime.getMinute() < pizzaOrderTime.getMinute()) {
 			throw new PizzaException("Delivery Time cannot be the earlier than pizzaOrderTime");
 		}
-		if(pizzaDeliveryTime.getMinute() < pizzaOrderTime.getMinute() + 10) {
-			throw new PizzaException("Delivery Time must be at least 10 minutes more than orderTime due to 10 minute"
-							         + "cooking time");
+		int minuteSet = pizzaOrderTime.getMinute() + 10;
+		if(minuteSet >= 60) {
+			minuteSet = minuteSet - 60;
+		}
+		if(pizzaDeliveryTime.getMinute() < minuteSet) {
+			if(pizzaDeliveryTime.getHour() <= pizzaOrderTime.getHour()) {
+				throw new PizzaException("Delivery Time must be at least 10 minutes more than orderTime due to 10 minute"
+				                         + " cooking time");
+			}
 		}
 		if(pizzaDeliveryTime.getHour() > pizzaOrderTime.getHour() && pizzaDeliveryTime.getMinute() >= 
 		   pizzaOrderTime.getMinute() && pizzaDeliveryTime.getSecond() > pizzaOrderTime.getSecond()) {
