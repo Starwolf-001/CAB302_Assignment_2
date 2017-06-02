@@ -420,5 +420,5 @@ public class CustomerTests {
 	/**
 	 * Test method for {@link asgn2Customers.Customer#equals(java.lang.Object)}.
 	 * EqualsObject() does not need to be tested
-	 **/
+	 */
 }

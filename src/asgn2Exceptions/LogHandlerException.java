@@ -3,6 +3,8 @@ package asgn2Exceptions;
 /**
  * A class that represents exceptions related to reading in the log file
  * such as incorrect format or exceptions related to input/output.
+ * @author Alan Woodley
+ * 
  */
 public class LogHandlerException extends Exception {
 
