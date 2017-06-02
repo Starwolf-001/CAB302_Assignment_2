@@ -22,7 +22,7 @@ public class RestaurantCustomerTests {
 	/**
 	 * Test method for PizzaRestaurant
 	 * {@link asgn2Restaurant.PizzaRestaurant#PizzaRestaurant()}.
-	 * no exceptions
+	 * no throws
 	 */
 	// Test for ArrayList<Customer> customers is empty.
 	@Test
@@ -39,8 +39,9 @@ public class RestaurantCustomerTests {
 	/**
 	 * Test method for ProcessLog
 	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
-	 * @throws CustomerException, LogHandlerException, PizzaException 
-	 * Also throws PizzaException but for RestaurantCustomerTests only Customers are the focus
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 	
 	// Successfully call processLog and prove that a customer was added in restaurant
@@ -222,7 +223,9 @@ public class RestaurantCustomerTests {
 	/**
 	 * Test method for getCustomerIndex
 	 * {@link asgn2Restaurant.PizzaRestaurant#getCustomerByIndex(int)}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 	
 	// Identifies if the first customer has the correct values found by method
@@ -286,7 +289,7 @@ public class RestaurantCustomerTests {
 	/**
 	 * Test method for getNumCustomerOrders
 	 * {@link asgn2Restaurant.PizzaRestaurant#getNumCustomerOrders()}.
-	 * no exceptions
+	 * no throws
 	 */
 	
 	// Validates is the size of customers in zero using getNumCustomerOrders()
@@ -303,7 +306,9 @@ public class RestaurantCustomerTests {
 	/**
 	 * Test method for getTotalDeliveryDistance
 	 * {@link asgn2Restaurant.PizzaRestaurant#getTotalDeliveryDistance()}.
-	 * no exceptions
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 	
 	// Takes the total distance travel for all three customers
@@ -398,7 +403,9 @@ public class RestaurantCustomerTests {
 	/**
 	 * Test method for resetDetails
 	 * {@link asgn2Restaurant.PizzaRestaurant#resetDetails()}.
-	 * no exceptions
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 	
 	// Resets customers and pizzas

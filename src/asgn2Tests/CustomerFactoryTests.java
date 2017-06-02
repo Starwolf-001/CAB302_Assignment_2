@@ -19,7 +19,7 @@ public class CustomerFactoryTests {
 	/**
 	 * Test methods for the CustomerFactory
 	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	
 	// Expecting correct customerCodes for three customers

@@ -23,7 +23,7 @@ public class CustomerTests {
 	/**
 	 * Test method for Customer
 	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
-	 * @throws CustomerException
+	 * @throws CustomerException  if customer details do not meet or fail the the customer specifications 
 	 */
 	
 	// Expecting customer, of type Pick Up, to be successfully implemented
@@ -259,7 +259,7 @@ public class CustomerTests {
 	/**
 	 * Test method for getName
 	 * {@link asgn2Customers.Customer#getName()}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetName() throws CustomerException {
@@ -278,7 +278,7 @@ public class CustomerTests {
 	/**
 	 * Test method for getMobileNumber
 	 * {@link asgn2Customers.Customer#getMobileNumber()}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetMobileNumber() throws CustomerException {
@@ -297,7 +297,7 @@ public class CustomerTests {
 	/**
 	 * Test method for getCustomerType
 	 * {@link asgn2Customers.Customer#getCustomerType()}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetCustomerType() throws CustomerException {
@@ -315,7 +315,7 @@ public class CustomerTests {
 	/**
 	 * Test method for getLocationX
 	 * {@link asgn2Customers.Customer#getLocationX()}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetLocationX() throws CustomerException {
@@ -335,7 +335,7 @@ public class CustomerTests {
 	/**
 	 * Test method for getLocationY
 	 * {@link asgn2Customers.Customer#getLocationY()}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetLocationY() throws CustomerException {
@@ -356,7 +356,7 @@ public class CustomerTests {
 	 * Test method for getDeliveryDistance for Pick Up customer type
 	 * Expecting a delivery distance of 0
 	 * {@link asgn2Customers.Customer#getDeliveryDistance()}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetDeliveryDistancePickUp() throws CustomerException {
@@ -377,7 +377,7 @@ public class CustomerTests {
 	 * Test method for getDeliveryDistance for Drone Delivery customer type
 	 * Expecting a delivery distance of 7.071068
 	 * {@link asgn2Customers.Customer#getDeliveryDistance()}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetDeliveryDistanceDroneDelivery() throws CustomerException {
@@ -399,7 +399,7 @@ public class CustomerTests {
 	 * Test method for getDeliveryDistance for Driver Delivery customer type
 	 * Expecting a delivery distance of 10.0
 	 * {@link asgn2Customers.Customer#getDeliveryDistance()}.
-	 * @throws CustomerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetDeliveryDistanceDriverDelivery() throws CustomerException {

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import asgn2Exceptions.CustomerException;
 import asgn2Exceptions.LogHandlerException;
 import asgn2Exceptions.PizzaException;
 import asgn2Pizzas.Pizza;
@@ -24,7 +25,8 @@ public class LogHandlerPizzaTests {
 	/**
 	 * Test method for populatePizzaDataset
 	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
-	 * @throws PizzaException, LogHandlerException
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to pizza specifications
 	 */
 	
 	// Expecting a single Pizza to be populated and created
@@ -239,7 +241,8 @@ public class LogHandlerPizzaTests {
 	/**
 	 * Test method for createPizza
 	 * {@link asgn2Restaurant.LogHandler#createPizza(java.lang.String)}.
-	 * @throws PizzaException, LogHandlerException
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to pizza specifications
 	 */
 	
 	// Expecting Pizza to be created

@@ -23,7 +23,8 @@ public class LogHandlerCustomerTests {
 	/**
 	 * Test method for populateCustomerDataset
 	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
-	 * @throws CustomerException, LogHandlerException
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer specifications
 	 */
 	
 	// Expecting a single Customer to be populated and created
@@ -224,8 +225,8 @@ public class LogHandlerCustomerTests {
 	/**
 	 * Test method for createCustomer
 	 * {@link asgn2Restaurant.LogHandler#createCustomer(java.lang.String)}.
-	 * @throws CustomerException, LogHandlerException
-	 * @throws LogHandlerException 
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer specifications
 	 */
 	
 	// Expecting Customer to be created

@@ -22,7 +22,7 @@ public class RestaurantPizzaTests {
 	/**
 	 * Test method for Restaurant Pizza aimed at testing Pizza
 	 * {@link asgn2Restaurant.PizzaRestaurant#PizzaRestaurant()}.
-	 * 
+	 * no throws
 	 */
 	// Test for ArrayList<Pizza> pizzas is empty.
 	@Test
@@ -39,8 +39,9 @@ public class RestaurantPizzaTests {
 	/**
 	 * Test method for 
 	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
-	 * @throws CustomerException, LogHandlerException, PizzaException 
-	 * Also throws CustomerException but for RestaurantPizzaTests only Pizzas are the focus
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 	
 	// Successfully call processLog and prove that a customer was added in restaurant
@@ -240,7 +241,9 @@ public class RestaurantPizzaTests {
 	/**
 	 * Test method for getPizzaByIndex
 	 * {@link asgn2Restaurant.PizzaRestaurant#getPizzaByIndex(int)}.
-	 * 
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 		
 	// Identifies if the first customer has the correct values found by method
@@ -303,7 +306,7 @@ public class RestaurantPizzaTests {
 	/**
 	 * Test method for 
 	 * {@link asgn2Restaurant.PizzaRestaurant#getNumPizzaOrders()}.
-	 * 
+	 * no throws
 	 */
 		
 	// Validates is the size of customers in zero using getNumCustomerOrders()
@@ -320,7 +323,9 @@ public class RestaurantPizzaTests {
 	/**
 	 * Test method for 
 	 * {@link asgn2Restaurant.PizzaRestaurant#getTotalProfit()}.
-	 * 
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 	@Test
 	public void testGetTotalProfitSuccess() throws CustomerException, PizzaException, LogHandlerException {
@@ -352,7 +357,9 @@ public class RestaurantPizzaTests {
 	/**
 	 * Test method for 
 	 * {@link asgn2Restaurant.PizzaRestaurant#resetDetails()}.
-	 * 
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 	
 	// Resets customers and pizzas

@@ -7,6 +7,7 @@ import java.time.LocalTime;
 
 import org.junit.Test;
 
+import asgn2Exceptions.LogHandlerException;
 import asgn2Exceptions.PizzaException;
 import asgn2Pizzas.Pizza;
 import asgn2Pizzas.PizzaFactory;
@@ -21,7 +22,7 @@ public class PizzaFactoryTests {
 	/**
 	 * Test method for getPizza
 	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
-	 * @throws PizzaException
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Expecting correct pizzaCodes for three pizza orders

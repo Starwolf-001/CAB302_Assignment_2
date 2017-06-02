@@ -106,6 +106,7 @@ public abstract class Pizza  {
 	 *  
      * <P> PRE: TRUE
 	 * <P> POST: The cost field is set to sum of the Pizzas's toppings
+	 * @param inToppingList
 	 */
 	public final void calculateCostPerPizza(PizzaTopping inToppingList[]){
 		perPizzaCost = 0.0;

@@ -26,7 +26,7 @@ public class PizzaTests {
 	/**
 	 * Test method for Pizza
 	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
-	 * @throws PizzaException
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Meat lovers pizza test to identify if pizza works as intended using MeatLoversPizza
@@ -214,7 +214,7 @@ public class PizzaTests {
 	/**
 	 * Test method for calculateCostPerPizza
 	 * {@link asgn2Pizzas.Pizza#calculateCostPerPizza()}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for calcaluateCostPerPizza
@@ -237,7 +237,7 @@ public class PizzaTests {
 	/**
 	 * Test method for getCostPerPizza
 	 * {@link asgn2Pizzas.Pizza#getCostPerPizza()}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for getCostPerPizza
@@ -265,7 +265,7 @@ public class PizzaTests {
 	/**
 	 * Test method for getPricePerPizza
 	 * {@link asgn2Pizzas.Pizza#getPricePerPizza()}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for getCostPerPizza
@@ -288,7 +288,7 @@ public class PizzaTests {
 	/**
 	 * Test method for getOrderCost
 	 * {@link asgn2Pizzas.Pizza#getOrderCost()}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for getOrderCost
@@ -311,7 +311,7 @@ public class PizzaTests {
 	/**
 	 * Test method for getOrderPrice
 	 * {@link asgn2Pizzas.Pizza#getOrderPrice()}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for getOrderPrice
@@ -334,7 +334,7 @@ public class PizzaTests {
 	/**
 	 * Test method for getOrderProfit
 	 * {@link asgn2Pizzas.Pizza#getOrderProfit()}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for getOrderProfit
@@ -357,7 +357,7 @@ public class PizzaTests {
 	/**
 	 * Test method for containsTopping
 	 * {@link asgn2Pizzas.Pizza#containsTopping(asgn2Pizzas.PizzaTopping)}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for constainsTopping and MargheritaPizza
@@ -438,7 +438,7 @@ public class PizzaTests {
 	/**
 	 * Test method for getQuantity
 	 * {@link asgn2Pizzas.Pizza#getQuantity()}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for getQuantity
@@ -461,7 +461,7 @@ public class PizzaTests {
 	/**
 	 * Test method for getPizzaType
 	 * {@link asgn2Pizzas.Pizza#getPizzaType()}.
-	 * no throws
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
 	// Specific test for getPizzaType
