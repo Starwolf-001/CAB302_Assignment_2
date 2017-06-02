@@ -38,6 +38,7 @@ public class LogHandler {
         File file = new File(filename);
 		try{
 			Scanner scan = new Scanner(file);
+			// While until each line in the file selected has processed
 			while(scan.hasNextLine()){
 				String line = scan.nextLine();
 				result.add(createCustomer(line));
@@ -63,6 +64,7 @@ public class LogHandler {
 		File file = new File(filename);
 		try{
 			Scanner scan = new Scanner(file);
+			// While until each line in the file selected has processed
 			while(scan.hasNextLine()){
 				String line = scan.nextLine();
 				result.add(createPizza(line));

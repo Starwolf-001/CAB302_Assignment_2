@@ -47,6 +47,7 @@ public abstract class Customer {
 		this.customerLocationY = locationY;
 		this.customerType = type;
 		
+		// Checks customerName is within specifications
 		if(customerName == "" || customerName == null) {
 			throw new CustomerException("customerName is an empty string or is null");
 		}
@@ -74,6 +75,7 @@ public abstract class Customer {
 										    + " was used");
 			}
 		}
+		// Checks if customerMobileNumber is within specifications
 		if(customerMobileNumber == "" || customerMobileNumber == null) {
 			throw new CustomerException("customerMobileNumber is an empty string or is null");
 		}
@@ -90,12 +92,14 @@ public abstract class Customer {
 				throw new CustomerException("customerMobileNumber must only contain numbers from, and including, 0 to 9");
 			}
 		}
+		// Checks if customerLocation for X and Y is within specifications
 		if(customerLocationX < -10 || customerLocationX > 10) {
 			throw new CustomerException("customerLocationX is either greater than 10 or less than -10");
 		}
 		if(customerLocationY < -10 || customerLocationY > 10) {
 			throw new CustomerException("customerLocationY is either greater than 10 or less than -10");
 		}
+		// Checks if customerType has returned correctly
 		if(customerType != "Pick Up" && customerType != "Drone Delivery" && customerType != "Driver Delivery") {
 			throw new CustomerException("customerType is an empty string or is null");
 		}

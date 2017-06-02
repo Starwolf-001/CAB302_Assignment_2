@@ -57,7 +57,15 @@ public class RestaurantPizzaTests {
 			fail("Pizzas is not an empty ArrayList");
 		}
 	}
-
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testProcessLogInvalidPizzaCode() throws CustomerException, LogHandlerException, PizzaException {
@@ -66,6 +74,14 @@ public class RestaurantPizzaTests {
 		restaurant.processLog(filename);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -76,167 +92,311 @@ public class RestaurantPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
 	// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaQuantityNegative() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaQuantityNegative.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaQuantityNegative() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaQuantityNegative.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaQuantityHigh() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaQuantityHigh.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaQuantityEmpty() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaQuantityEmpty.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaQuantityDoubleVariable() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaQuantityDoubleVariable.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaQuantityNonDigit() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaQuantityNonDigit.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaQuantityGiantNumber() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaQuantityGiantNumber.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
 		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaQuantityHigh() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaQuantityHigh.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessPizzaQuantityGiantDoubleVariable() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaQuantityGiantDoubleVariable.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
 		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaQuantityEmpty() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaQuantityEmpty.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaQuantityDoubleVariable() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaQuantityDoubleVariable.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaQuantityNonDigit() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaQuantityNonDigit.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaQuantityGiantNumber() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaQuantityGiantNumber.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessPizzaQuantityGiantDoubleVariable() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaQuantityGiantDoubleVariable.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaOrderTimeEmpty() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaOrderTimeEmpty.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaDeliveryTimeEmpty() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaDeliveryTimeEmpty.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaTimeInvalidFormat() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaOrderTimeInvalidFormat.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaTimeNonDigits() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaOrderTimeNonDigits.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaOrderTimeBeforeOpening() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaOrderTimeBeforeOpening.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaOrderTimeAfterClose() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaOrderTimeAfterClose.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaDeliveryTimeInsideCookingTime() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaDeliveryTimeCookingTime.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaDeliveryTimeHourSinceOrderTime() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaDeliveryTimeHourSinceOrderTime.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaDeliveryTimeEqualOrderTime() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaDeliveryTimeEqualOrderTime.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaDeliveryTimeHourLessOrderTime() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaDeliveryTimeHourLess.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
-		
-		// Expecting exception
-		@Test(expected=LogHandlerException.class)
-		public void testProcessLogPizzaDeliveryTimeHourSameMinuteLessOrderTime() throws CustomerException, PizzaException, LogHandlerException {
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			String filename = "logs/failPizzaDeliveryTimeHourSameMinuteLess.txt";
-			restaurant.processLog(filename);
-			fail("Exception Expected");
-		}
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaOrderTimeEmpty() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaOrderTimeEmpty.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaDeliveryTimeEmpty() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaDeliveryTimeEmpty.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaTimeInvalidFormat() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaOrderTimeInvalidFormat.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaTimeNonDigits() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaOrderTimeNonDigits.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaOrderTimeBeforeOpening() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaOrderTimeBeforeOpening.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaOrderTimeAfterClose() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaOrderTimeAfterClose.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaDeliveryTimeInsideCookingTime() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaDeliveryTimeCookingTime.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaDeliveryTimeHourSinceOrderTime() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaDeliveryTimeHourSinceOrderTime.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaDeliveryTimeEqualOrderTime() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaDeliveryTimeEqualOrderTime.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaDeliveryTimeHourLessOrderTime() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaDeliveryTimeHourLess.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#processLog(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected since the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
+	// Expecting exception
+	@Test(expected=LogHandlerException.class)
+	public void testProcessLogPizzaDeliveryTimeHourSameMinuteLessOrderTime() throws CustomerException, PizzaException, LogHandlerException {
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		String filename = "logs/failPizzaDeliveryTimeHourSameMinuteLess.txt";
+		restaurant.processLog(filename);
+		fail("Exception Expected");
+	}
 		
 	/**
 	 * Test method for getPizzaByIndex
@@ -267,14 +427,31 @@ public class RestaurantPizzaTests {
 				 + " testPopulate");
 		}
 	}
+	
+	/**
+	 * Test method for getPizzaByIndex
+	 * {@link asgn2Restaurant.PizzaRestaurant#getPizzaByIndex(int)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
 	// Exception Expected
-		@Test(expected=PizzaException.class)
-		public void testGetPizzaByIndexNoPizzas() throws PizzaException{
-			PizzaRestaurant restaurant = new PizzaRestaurant();
-			restaurant.getPizzaByIndex(0);
-			fail("Exception expected");
-		}
+	@Test(expected=PizzaException.class)
+	public void testGetPizzaByIndexNoPizzas() throws PizzaException{
+		PizzaRestaurant restaurant = new PizzaRestaurant();
+		restaurant.getPizzaByIndex(0);
+		fail("Exception expected");
+	}
 		
+	/**
+	 * Test method for getPizzaByIndex
+	 * {@link asgn2Restaurant.PizzaRestaurant#getPizzaByIndex(int)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
+	
 		// Exception Expected
 		// Note: CustomerException and LogHandlerException added due to processLog()
 		@Test(expected=PizzaException.class)
@@ -288,6 +465,14 @@ public class RestaurantPizzaTests {
 				fail("Exception expected");
 			}
 		}
+		
+		/**
+		 * Test method for getPizzaByIndex
+		 * {@link asgn2Restaurant.PizzaRestaurant#getPizzaByIndex(int)}.
+		 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+		 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications
+		 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
+		 */
 		
 		// Exception Expected
 		// Note: CustomerException and LogHandlerException added due to processLog()
@@ -343,6 +528,14 @@ public class RestaurantPizzaTests {
 			fail("getTotalProfit was not equal to totalProfitTest");
 		}
 	}
+	
+	/**
+	 * Test method for 
+	 * {@link asgn2Restaurant.PizzaRestaurant#getTotalProfit()}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 * @throws LogHandlerException as expected for the file cannot be read, missing parts, or not to customer or pizza specifications
+	 */
 	
 	// Exception Expected
 	// Note: CustomerException, PizzaException and LogHandlerException added due to processLog()

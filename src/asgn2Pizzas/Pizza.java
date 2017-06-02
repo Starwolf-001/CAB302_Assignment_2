@@ -51,12 +51,14 @@ public abstract class Pizza  {
 		this.pizzaType = type;
 		this.perPizzaPrice = price;
 		
+		// Checks if pizzaQuantity meets the specifications
 		if(pizzaQuantity <= 0) {
 			throw new PizzaException("Pizza quantity cannot be less than or equal to 0");
 		}
 		if(pizzaQuantity > 10) {
 			throw new PizzaException("Pizza quantity cannot be more than 10");
 		}
+		// Checks if pizza orderTime and deliverTime meet the specifications
 		if(pizzaOrderTime == null || pizzaOrderTime.equals("")) {
 			throw new PizzaException("Order time cannot be NULL");
 		}
@@ -93,9 +95,11 @@ public abstract class Pizza  {
 			throw new PizzaException("Pizza's deliveryTime indicates pizza was not delivered or pickup"
 					                 + " up more than 1 hour since orderTime");
 		}
+		// Checks if pizzaType returned correctly
 		if(pizzaType == "" || pizzaType == null) {
 			throw new PizzaException("Pizza type cannot be an empty string or NULL");
 		}
+		// Checks if the pizzaPrice (per) is not negative
 		if(perPizzaPrice < 0) {
 			throw new PizzaException("Pizza price cannot be less than $0.00");
 		}
@@ -110,6 +114,7 @@ public abstract class Pizza  {
 	 */
 	public final void calculateCostPerPizza(PizzaTopping inToppingList[]){
 		perPizzaCost = 0.0;
+		// Takes toppings from "specified"Pizza.java
 		this.toppingList = inToppingList;
 		for(PizzaTopping element: this.toppingList) {
 			if(containsTopping(element)){

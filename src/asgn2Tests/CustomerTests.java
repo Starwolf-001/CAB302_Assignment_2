@@ -45,6 +45,12 @@ public class CustomerTests {
 		}
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerNameEmpty() throws CustomerException {
@@ -52,6 +58,12 @@ public class CustomerTests {
 		Customer newCustomer = new PickUpCustomer("", "0412345678", 0, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -61,6 +73,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerNameLong() throws CustomerException {
@@ -68,6 +86,12 @@ public class CustomerTests {
 		Customer newCustomer = new PickUpCustomer("Viktoriya Ivanovna Serebryakova", "0412345678", 0, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -77,6 +101,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerNameWhiteSpace() throws CustomerException {
@@ -84,6 +114,12 @@ public class CustomerTests {
 		Customer newCustomer = new PickUpCustomer("     ", "0412345678", 0, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -93,6 +129,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerMobileNumberNull() throws CustomerException {
@@ -100,6 +142,12 @@ public class CustomerTests {
 		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", null, 0, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -109,6 +157,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerMobileNumberNonDigit() throws CustomerException {
@@ -116,6 +170,12 @@ public class CustomerTests {
 		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "04S0000000", 0, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -125,6 +185,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerMobileNumberLong() throws CustomerException {
@@ -132,6 +198,12 @@ public class CustomerTests {
 		Customer newCustomer = new PickUpCustomer("Ryuuko Matoi", "04123456789", 0, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -141,6 +213,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerXUpperBound() throws CustomerException {
@@ -148,6 +226,12 @@ public class CustomerTests {
 		Customer newCustomer = new DroneDeliveryCustomer("Rebecca Lee", "0412345678", 11, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -157,6 +241,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerXLowerBound() throws CustomerException {
@@ -165,6 +255,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerYLowerBound() throws CustomerException {
@@ -172,6 +268,12 @@ public class CustomerTests {
 		Customer newCustomer = new DroneDeliveryCustomer("Rebecca Lee", "0412345678", 0, -11);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException if customer does not meet or fail the the customer specifications 
+	 */
 	
 	// Expecting PickUpCustomer to implement successfully
 	@Test
@@ -190,6 +292,12 @@ public class CustomerTests {
 		}
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerPickUpLocationXFail() throws CustomerException {
@@ -198,6 +306,12 @@ public class CustomerTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerPickUpLocationYFail() throws CustomerException {
@@ -205,6 +319,12 @@ public class CustomerTests {
 		Customer newCustomer = new PickUpCustomer("Edward Elric", "0412345678", 0, 1);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException if customer does not meet or fail the the customer specifications 
+	 */
 	
 	// Expecting DroneDeliveryCustomer to implement successfully
 	@Test
@@ -223,6 +343,12 @@ public class CustomerTests {
 		}
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerDroneDeliveryLocationFail() throws CustomerException {
@@ -230,6 +356,12 @@ public class CustomerTests {
 		Customer newCustomer = new DroneDeliveryCustomer("Light Yagami", "0412345678", 0, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException if customer does not meet or fail the the customer specifications  
+	 */
 	
 	// Expecting DriverDeliveryCustomer to implement successfully
 	@Test
@@ -248,6 +380,12 @@ public class CustomerTests {
 		}
 	}
 	
+	/**
+	 * Test method for Customer
+	 * {@link asgn2Customers.Customer#Customer(java.lang.String, java.lang.String, int, int, java.lang.String)}.
+	 * @throws CustomerException as expected for not meeting or failing the the customer specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerDriverDeliveryLocationFail() throws CustomerException {
@@ -259,7 +397,7 @@ public class CustomerTests {
 	/**
 	 * Test method for getName
 	 * {@link asgn2Customers.Customer#getName()}.
-	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws CustomerException if customer does not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetName() throws CustomerException {
@@ -278,7 +416,7 @@ public class CustomerTests {
 	/**
 	 * Test method for getMobileNumber
 	 * {@link asgn2Customers.Customer#getMobileNumber()}.
-	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws CustomerException if customer does not meet or fail the the customer specifications 
 	 */
 	@Test
 	public void testGetMobileNumber() throws CustomerException {

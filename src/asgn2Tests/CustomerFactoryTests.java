@@ -40,6 +40,12 @@ public class CustomerFactoryTests {
 		}
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerFactoryInvalidCode() throws CustomerException {
@@ -48,6 +54,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -58,6 +70,12 @@ public class CustomerFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerFactoryNullCode() throws CustomerException {
@@ -66,6 +84,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -76,6 +100,12 @@ public class CustomerFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerUpperXLocationBounds() throws CustomerException {
@@ -84,6 +114,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -94,6 +130,12 @@ public class CustomerFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerLowerXLocationBounds() throws CustomerException {
@@ -102,6 +144,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -112,6 +160,12 @@ public class CustomerFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerSmallMobileNumber() throws CustomerException {
@@ -120,6 +174,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -130,6 +190,12 @@ public class CustomerFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerMobileNumberIncorrectBeginning() throws CustomerException {
@@ -138,6 +204,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -148,6 +220,12 @@ public class CustomerFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerMobileNumberWithAlphabet() throws CustomerException {
@@ -156,6 +234,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting the mobileNumber to be correct
 	@Test
@@ -171,6 +255,12 @@ public class CustomerFactoryTests {
 		}
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerNameEmpty() throws CustomerException {
@@ -179,7 +269,13 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
-		
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerNameNull() throws CustomerException {
@@ -188,6 +284,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -198,6 +300,12 @@ public class CustomerFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerNameLong() throws CustomerException {
@@ -206,6 +314,12 @@ public class CustomerFactoryTests {
 		//Should never reach here
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
@@ -216,6 +330,12 @@ public class CustomerFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)
 	public void testCustomerNameWhiteSpace() throws CustomerException {
@@ -223,6 +343,12 @@ public class CustomerFactoryTests {
 		Customer newCustomer = CustomerFactory.getCustomer("PUC", "     ", "0412345678", 0, 0);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test methods for the CustomerFactory
+	 * {@link asgn2Customers.CustomerFactory#getCustomer(java.lang.String, java.lang.String, java.lang.String, int, int)}.
+	 * @throws CustomerException as expected for not meeting customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=CustomerException.class)

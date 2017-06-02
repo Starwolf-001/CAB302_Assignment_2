@@ -47,6 +47,12 @@ public class PizzaTests {
 		}
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Vegetarian pizza test to identify if pizza works as intended using VegetarianPizza
 	@Test
 	public void testVegetarianPizzaSuccessful() throws PizzaException {
@@ -64,6 +70,12 @@ public class PizzaTests {
 			fail("Pizza failed to be implemented correctly");
 		}
 	}
+	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Margherita pizza test to identify if pizza works as intended using MargheritaPizza
 	@Test
@@ -83,6 +95,12 @@ public class PizzaTests {
 		}
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
 	public void testPizzaQuantityZero() throws PizzaException {
@@ -92,6 +110,12 @@ public class PizzaTests {
 		Pizza newPizza = new MargheritaPizza(0, orderTime, deliveryTime);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
@@ -103,6 +127,12 @@ public class PizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
 	public void testPizzaHighQuantity() throws PizzaException {
@@ -113,6 +143,12 @@ public class PizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
 	public void testPizzaOrderTimeNull() throws PizzaException {
@@ -122,6 +158,12 @@ public class PizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
 	public void testPizzaDeliveryTimeNull() throws PizzaException {
@@ -130,6 +172,12 @@ public class PizzaTests {
 		Pizza newPizza = new MargheritaPizza(11, orderTime, null);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
@@ -141,6 +189,12 @@ public class PizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
 	public void testPizzaOrderTimeAfterClosed() throws PizzaException {
@@ -150,6 +204,12 @@ public class PizzaTests {
 		Pizza newPizza = new MargheritaPizza(11, orderTime, deliveryTime);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
@@ -161,6 +221,12 @@ public class PizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
 	public void testPizzaDeliveryOrderHourLessThanOrderTime() throws PizzaException {
@@ -170,6 +236,12 @@ public class PizzaTests {
 		Pizza newPizza = new MargheritaPizza(11, orderTime, deliveryTime);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
@@ -181,6 +253,12 @@ public class PizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
 	public void testPizzaDeliveryTimeLessThanCookingTime() throws PizzaException {
@@ -191,6 +269,12 @@ public class PizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
 	public void testPizzaTimeExpired() throws PizzaException {
@@ -200,6 +284,12 @@ public class PizzaTests {
 		Pizza newPizza = new MargheritaPizza(11, orderTime, deliveryTime);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for Pizza
+	 * {@link asgn2Pizzas.Pizza#Pizza(int, java.time.LocalTime, java.time.LocalTime, java.lang.String, double)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Exception Expected
 	@Test(expected=PizzaException.class)
@@ -377,6 +467,12 @@ public class PizzaTests {
 		}
 	}
 	
+	/**
+	 * Test method for containsTopping
+	 * {@link asgn2Pizzas.Pizza#containsTopping(asgn2Pizzas.PizzaTopping)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Specific test for constainsTopping and MargheritaPizza
 	// @throws PizzaException due to Pizza
 	@Test
@@ -396,6 +492,12 @@ public class PizzaTests {
 		}
 	}
 	
+	/**
+	 * Test method for containsTopping
+	 * {@link asgn2Pizzas.Pizza#containsTopping(asgn2Pizzas.PizzaTopping)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Specific test for constainsTopping and Meat Lovers Pizza
 	// @throws PizzaException due to Pizza
 	@Test
@@ -414,6 +516,12 @@ public class PizzaTests {
 			fail("One or more toppings are not on the Meat Lovers pizza");
 		}
 	}
+	
+	/**
+	 * Test method for containsTopping
+	 * {@link asgn2Pizzas.Pizza#containsTopping(asgn2Pizzas.PizzaTopping)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
+	 */
 	
 	// Specific test for constainsTopping and Meat Lovers Pizza
 	// @throws PizzaException due to Pizza

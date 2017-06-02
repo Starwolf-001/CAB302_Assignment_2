@@ -47,6 +47,12 @@ public class PizzaFactoryTests {
 		}
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting correct pizza price for each pizza type
 	@Test
 	public void testPizzaFactoryPizzaTypePrice() throws PizzaException {
@@ -68,6 +74,12 @@ public class PizzaFactoryTests {
 		}
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryInvalidCode() throws PizzaException {
@@ -78,6 +90,12 @@ public class PizzaFactoryTests {
 		//Expecting exception
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
@@ -101,6 +119,12 @@ public class PizzaFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryLowerCaseCode() throws PizzaException {
@@ -111,6 +135,12 @@ public class PizzaFactoryTests {
 		//Expecting exception
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
@@ -123,6 +153,12 @@ public class PizzaFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryQuantityValueHigh() throws PizzaException {
@@ -133,6 +169,12 @@ public class PizzaFactoryTests {
 		//Expecting exception
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
@@ -145,6 +187,12 @@ public class PizzaFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryOrderTimeNull() throws PizzaException {
@@ -155,6 +203,12 @@ public class PizzaFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryDeliveryTimeNull() throws PizzaException {
@@ -164,6 +218,12 @@ public class PizzaFactoryTests {
 		//Expecting exception
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
@@ -176,6 +236,12 @@ public class PizzaFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryOrderTimeAfterClose() throws PizzaException {
@@ -186,6 +252,12 @@ public class PizzaFactoryTests {
 		//Expecting exception
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
@@ -198,6 +270,12 @@ public class PizzaFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryDeliveryTimeHourBeforeOrderTime() throws PizzaException {
@@ -208,6 +286,12 @@ public class PizzaFactoryTests {
 		//Expecting exception
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
@@ -220,6 +304,12 @@ public class PizzaFactoryTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
+	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)
 	public void testPizzaFactoryDeliveryTimeHourSameMinutesSameSecondsBeforeOrderTime() throws PizzaException {
@@ -230,6 +320,12 @@ public class PizzaFactoryTests {
 		//Expecting exception
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for getPizza
+	 * {@link asgn2Pizzas.PizzaFactory#getPizza(java.lang.String, int, java.time.LocalTime, java.time.LocalTime)}.
+	 * @throws PizzaException as expected since pizza details do not meet or fail the the pizza specifications 
+	 */
 	
 	// Expecting an exception
 	@Test(expected=PizzaException.class)

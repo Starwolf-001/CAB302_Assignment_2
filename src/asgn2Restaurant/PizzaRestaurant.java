@@ -54,10 +54,8 @@ public class PizzaRestaurant {
      *
 	 */
 	public static boolean processLog(String filename) throws CustomerException, PizzaException, LogHandlerException {
-		
 		customers = LogHandler.populateCustomerDataset(filename);
 		pizzas = LogHandler.populatePizzaDataset(filename);
-		
 		return true;
 	}
 
@@ -68,6 +66,7 @@ public class PizzaRestaurant {
 	 * @throws CustomerException if index is invalid.
 	 */
 	public static Customer getCustomerByIndex(int index) throws CustomerException{
+		// Checks if selected customer meets within ArrayList size and specifications
 		if(customers.size() == 0) {
 			throw new CustomerException("There are no customers");
 		} else if(index < 0) {
@@ -86,6 +85,7 @@ public class PizzaRestaurant {
 	 * @throws PizzaException if index is invalid.
 	 */	
 	public Pizza getPizzaByIndex(int index) throws PizzaException{
+		// Checks if selected pizza meets within ArrayList size and specifications
 		if(pizzas.size() == 0) {
 			throw new PizzaException("There are no customers");
 		} else if(index < 0) {

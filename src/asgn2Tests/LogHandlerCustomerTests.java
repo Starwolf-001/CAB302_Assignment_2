@@ -42,6 +42,13 @@ public class LogHandlerCustomerTests {
 		}
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting multiple Customers to be populated and created
 	@Test
 	public void testPopulateMultipleCustomerDataset() throws CustomerException, LogHandlerException {
@@ -59,6 +66,13 @@ public class LogHandlerCustomerTests {
 			fail("Failed to populate or create multiple customers");
 		}
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting customers in 20170101.txt to be created
 	@Test
@@ -78,6 +92,13 @@ public class LogHandlerCustomerTests {
 		}
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerNoSuchFileName() throws CustomerException, LogHandlerException {
@@ -85,6 +106,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
@@ -94,6 +122,13 @@ public class LogHandlerCustomerTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerNameInvalidSymbol() throws CustomerException, LogHandlerException {
@@ -101,6 +136,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
@@ -110,6 +152,13 @@ public class LogHandlerCustomerTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerNameLong() throws CustomerException, LogHandlerException {
@@ -117,6 +166,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
@@ -126,6 +182,13 @@ public class LogHandlerCustomerTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerMobileStartingWithOne() throws CustomerException, LogHandlerException {
@@ -133,6 +196,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
@@ -142,6 +212,13 @@ public class LogHandlerCustomerTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerMobileShort() throws CustomerException, LogHandlerException {
@@ -149,6 +226,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
@@ -158,6 +242,13 @@ public class LogHandlerCustomerTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerMobileEmpty() throws CustomerException, LogHandlerException {
@@ -165,6 +256,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
@@ -174,6 +272,13 @@ public class LogHandlerCustomerTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerInvalidDroneAtPizzaPalace() throws CustomerException, LogHandlerException {
@@ -181,6 +286,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
@@ -190,6 +302,13 @@ public class LogHandlerCustomerTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerInvalidDroneLowerXBound() throws CustomerException, LogHandlerException {
@@ -198,6 +317,13 @@ public class LogHandlerCustomerTests {
 		fail("Exception is expected");
 	}
 	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
+	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
 	public void testCustomerInvalidDroneUpperYBound() throws CustomerException, LogHandlerException {
@@ -205,6 +331,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 		
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)
@@ -213,6 +346,13 @@ public class LogHandlerCustomerTests {
 		ArrayList<Customer> result = LogHandler.populateCustomerDataset(file);
 		fail("Exception is expected");
 	}
+	
+	/**
+	 * Test method for populateCustomerDataset
+	 * {@link asgn2Restaurant.LogHandler#populateCustomerDataset(java.lang.String)}.
+	 * @throws CustomerException if customer details do not meet or fail the the customer specifications 
+	 * @throws LogHandlerException as expected if the file cannot be read, missing parts, or not to customer specifications
+	 */
 	
 	// Expecting an exception
 	@Test(expected=LogHandlerException.class)

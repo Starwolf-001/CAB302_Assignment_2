@@ -46,6 +46,13 @@ public class LogHandlerPizzaTests {
 		}
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting multiple Pizzas to be populated and created
 	@Test
 	public void testFirstLogFileMultiplePizzas() throws PizzaException, LogHandlerException {
@@ -70,6 +77,13 @@ public class LogHandlerPizzaTests {
 		}
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaNoSuchFileName() throws PizzaException, LogHandlerException {
@@ -77,6 +91,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -86,6 +107,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaQuantityZero() throws PizzaException, LogHandlerException {
@@ -93,6 +121,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -102,6 +137,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaQuantityHigh() throws PizzaException, LogHandlerException {
@@ -109,6 +151,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -118,6 +167,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaQuantityDoubleVariable() throws PizzaException, LogHandlerException {
@@ -125,6 +181,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -134,6 +197,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaQuantityGiantNumber() throws PizzaException, LogHandlerException {
@@ -141,6 +211,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -150,6 +227,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaOrderTimeEmpty() throws PizzaException, LogHandlerException {
@@ -157,6 +241,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -166,6 +257,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaTimeInvalidFormat() throws PizzaException, LogHandlerException {
@@ -173,6 +271,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -182,6 +287,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaOrderTimeBeforeOpening() throws PizzaException, LogHandlerException {
@@ -189,6 +301,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -198,6 +317,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaDeliveryTimeInsideCookingTime() throws PizzaException, LogHandlerException {
@@ -205,6 +331,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
@@ -214,6 +347,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaDeliveryTimeEqualOrderTime() throws PizzaException, LogHandlerException {
@@ -222,6 +362,13 @@ public class LogHandlerPizzaTests {
 		fail("Exception Expected");
 	}
 	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
+	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
 	public void testPizzaDeliveryTimeHourLessOrderTime() throws PizzaException, LogHandlerException {
@@ -229,6 +376,13 @@ public class LogHandlerPizzaTests {
 		ArrayList<Pizza> result = LogHandler.populatePizzaDataset(file);
 		fail("Exception Expected");
 	}
+	
+	/**
+	 * Test method for populatePizzaDataset
+	 * {@link asgn2Restaurant.LogHandler#populatePizzaDataset(java.lang.String)}.
+	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
+	 * @throws LogHandlerException as expected as the file cannot be read, missing parts, or not to pizza specifications
+	 */
 	
 	// Expecting exception
 	@Test(expected=LogHandlerException.class)
