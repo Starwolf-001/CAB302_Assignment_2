@@ -216,14 +216,14 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 		} else if (src == btnDisplayData && infoLoaded) {
 			displayPizzas.setText("");
 			displayCustomers.setText("");
-			displayPizzas.setText(String.format("   Pizza\n%-3s %-12s %-4s %-6s %-6s %-6s", " | ", "Type", "Qty", "Price", "Cost", 
-					                            "Profit\n"));
+			displayPizzas.setText(String.format("   Pizza\n%-3s %-12s %-4s %-13s %-12s %-13s", " | ", "Type", "Qty", "Order Price", "Order Cost", 
+					                            "Order Profit\n"));
 			displayCustomers.setText(String.format("Customers\n%-19s %-11s %-16s %-6s %-6s %-5s", "Name", "Mobile", 
 					                               "Type", "Loc X", "Loc Y", "Dist\n"));
 			try {
 				for(int indexPizza = 0; indexPizza < restaurant.getNumPizzaOrders(); indexPizza++) {
 					currentPizza = restaurant.getPizzaByIndex(indexPizza);
-					line = String.format("%-3s %-12s %-4d %-6.2f %-6.2f %-6.2f", " | ", currentPizza.getPizzaType(), 
+					line = String.format("%-3s %-12s %-4d %-13.2f %-12.2f %-14.2f", " | ", currentPizza.getPizzaType(), 
 							             currentPizza.getQuantity(), currentPizza.getOrderPrice(), 
 							             currentPizza.getOrderCost(), currentPizza.getOrderProfit());
 					displayPizzas.append(line + "\n");
