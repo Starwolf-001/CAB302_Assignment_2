@@ -20,7 +20,7 @@ import asgn2Restaurant.PizzaRestaurant;
 public class RestaurantPizzaTests {
 
 	/**
-	 * Test method for 
+	 * Test method for Restaurant Pizza aimed at testing Pizza
 	 * {@link asgn2Restaurant.PizzaRestaurant#PizzaRestaurant()}.
 	 * 
 	 */
@@ -32,7 +32,7 @@ public class RestaurantPizzaTests {
 			assertTrue(true);
 		} else {
 			//Should never reach here
-			fail("pizzas is not an empty ArrayList"); // TODO
+			fail("pizzas is not an empty ArrayList");
 		}
 	}
 
@@ -53,7 +53,7 @@ public class RestaurantPizzaTests {
 			assertTrue(true);
 		} else {
 			//Should never reach here
-			fail("customers is not an empty ArrayList");
+			fail("Pizzas is not an empty ArrayList");
 		}
 	}
 
@@ -238,22 +238,25 @@ public class RestaurantPizzaTests {
 		}
 		
 	/**
-	 * Test method for 
+	 * Test method for getPizzaByIndex
 	 * {@link asgn2Restaurant.PizzaRestaurant#getPizzaByIndex(int)}.
 	 * 
 	 */
 		
 	// Identifies if the first customer has the correct values found by method
 	// Note: CustomerException and LogHandlerException added due to processLog()
-	@Test //TODO Haven't finished times
+	@Test
 	public void testGetPizzaByIndexSuccess() throws CustomerException, PizzaException, LogHandlerException{
 		PizzaRestaurant restaurant = new PizzaRestaurant();
 		String filename = "logs/testPopulate.txt";
 		restaurant.processLog(filename);		
-		if(restaurant.getPizzaByIndex(0).getPizzaType().equals("PZV") && 
-		   restaurant.getPizzaByIndex(0).getQuantity() == 10) {
-		   //restaurant.getPizzaByIndex(0).orderTime == 19:00:00 &&
-		   //restaurant.getPizzaByIndex(0).deliveryTime == 19:20:00) {
+		if(restaurant.getPizzaByIndex(0).getPizzaType().equals("Vegetarian") && 
+		   restaurant.getPizzaByIndex(0).getQuantity() == 10 &&
+		   restaurant.getPizzaByIndex(0).getCostPerPizza() == 5.5 &&
+		   restaurant.getPizzaByIndex(0).getOrderPrice() == 100 &&
+		   restaurant.getPizzaByIndex(0).getOrderCost() == 55 &&
+		   restaurant.getPizzaByIndex(0).getOrderProfit() == 45 &&
+		   restaurant.getPizzaByIndex(0).getPricePerPizza() == 10) {
 			assertTrue(true);
 		} else {
 			//Should never reach here
