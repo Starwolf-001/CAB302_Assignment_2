@@ -1,3 +1,7 @@
+* 7e06064 : Forgot to save Pizza.java for javadoc change. javadoc is fine.
+* 93d705f : Re-push all of docs.
+* 2872de6 : Added a description for javadoc. Fixed javadoc errors. Folder 'doc' updated.
+* 9caad21 : Added descriptions to javadoc. Before Javadoc update. Plus some minor tweaks.
 * da9fb0e : Fixed calculateCostPerPizza javadoc error
 * f520929 : Tweaked files for javadoc creation
 * 0c7777c : Tweaked some files ~ Stash.
@@ -58,7 +62,31 @@
 * 434d3ad : .
 * f748592 : .
 * dfba347 : .
-* e951c1e : .commit da9fb0e5bbce368ecbd2e875f75238927e0bc5d4
+* e951c1e : .commit 7e0606452184128953ea17090839e237a87072ab
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 17:12:32 2017 +1000
+
+    Forgot to save Pizza.java for javadoc change. javadoc is fine.
+
+commit 93d705f817530afbcf09a3c5b4912a54010282f3
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 17:10:03 2017 +1000
+
+    Re-push all of docs.
+
+commit 2872de6575d5a0bc3bf4cb0941050c8276b73aeb
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 17:08:55 2017 +1000
+
+    Added a description for javadoc. Fixed javadoc errors. Folder 'doc' updated.
+
+commit 9caad214baba8ce4b2788e1e9bfed9ce0758b555
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 17:04:24 2017 +1000
+
+    Added descriptions to javadoc. Before Javadoc update. Plus some minor tweaks.
+
+commit da9fb0e5bbce368ecbd2e875f75238927e0bc5d4
 Author: Starwolf-001 <the.Starwolf.001@gmail.com>
 Date:   Fri Jun 2 15:05:08 2017 +1000
 
