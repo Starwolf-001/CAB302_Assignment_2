@@ -110,7 +110,7 @@ public abstract class Pizza  {
 	 *  
      * <P> PRE: TRUE
 	 * <P> POST: The cost field is set to sum of the Pizzas's toppings
-	 * @param inToppingList
+	 * @param inToppingList - toppingList take from the "pizzaType"Pizza.java
 	 */
 	public final void calculateCostPerPizza(PizzaTopping inToppingList[]){
 		perPizzaCost = 0.0;

@@ -398,8 +398,6 @@ public class RestaurantCustomerTests {
 	 * Test method for getCustomerIndex
 	 * {@link asgn2Restaurant.PizzaRestaurant#getCustomerByIndex(int)}.
 	 * @throws CustomerException as expected as customer details do not meet or fail the the customer specifications 
-	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications
-	 * @throws LogHandlerException if the file cannot be read, missing parts, or not to customer or pizza specifications
 	 */
 	
 	// Exception Expected

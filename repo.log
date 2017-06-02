@@ -1,0 +1,422 @@
+* da9fb0e : Fixed calculateCostPerPizza javadoc error
+* f520929 : Tweaked files for javadoc creation
+* 0c7777c : Tweaked some files ~ Stash.
+*   0173455 : Merge branch 'master' of https://github.com/Starwolf-001/CAB302_Assignment_2
+|\  
+| * d3c817c : Added Repository Log
+* | c76e576 : Tweaked some files ~ Stash.
+* | 359f290 : Tweaked some files.
+|/  
+* ad6dbc0 : Version 1.2 of asgn2. Added 'Order' to text in Pizza categories in GUI.
+* efbd6ef : Version 1.1 of asgn2. Fixed bug in GUI.
+* 65901a5 : Fixed RestaurantPizzaTests.java. Version 1 of asgn2.
+* e945a02 : Copied Tests over to RestaurantPizzaTests. Removed Tests New
+* acb0f09 : Version 1 of GUI.
+* 34106b4 : Nearly finished RestaurantPizzaTests
+* 8869416 : Actually added RestaurantPizzaTestsNew.
+* e80455b : Preparing GUI overhaul. Added RestaurantPizzaTestsNew.
+* 4ef138e : Add some test data to make it work
+* 072e4e8 : More minor changes.
+* 0d27835 : Updated LogHandlerPizzaTests and removed LogHandlerPizzaTestsNew.
+* 8f129a6 : Version 1 of LogHandlerPizzaTestsNew. Some minor Tweaks. Also pulled Matthew's GUI bnefore this commit and notice changes to src/asgn2Restaurant/PizzaRestaurant.
+* 46794a7 : GUI and static classes
+* 1ea5564 : Updated PizzaTests and removed PizzaTestsNew.
+* 3c0249d : Version 1 of PizzaTestsNew and a few tweaks to pizza.
+* ceba147 : Updated PizzaFactoryTests and removed PizzaFactoryTestsNew.
+* d26e790 : Version 1 of PizzaFactoryTestsNew. Some small tweaks to Pizza and the three types of pizza.
+* 83b18ab : Updated official test files and removed New test files for customer based testing.
+* 2454d19 : Version 1 of RestaurantCustomerTestsNew created. Tweaks made to a few files.
+* 5e558f5 : Working on RestaurantCustomerTests. Plus a few tweaks.
+* 3dfab41 : Version 1 of LogHandlerCustomerTestsNew. Created new log files for testing purposes.
+* e9f260c : Removed second number must be a '4' for mobileNumbers. Added characters ' and - to be used in people's names. Placed in assumptions for what characters are actually valid for customerName.
+* 34be805 : Fixed PizzaFactory.java for future testing purposes.
+* 728c300 : Working on LogHandlerTests. Fixed LogHandler.java failure to read lines. Fixed CustomerFactory so that CVV read values DO equal the values of customerCodes.
+* ea39750 : Added Matthew Pike's name to files he is the author of. Preparing LogHandlerCustomerTests and RestaurantCustomerTests
+* 122410a : Place instructions in CustomerFactoryTests and CustomerTests
+* 3bf4e29 : Version 1 of CustomerTestsNew
+* 4ec489c : Version 3 of CustomerFactoryTestsNew and working on CustomerTestsNew. Fixed euclidean distance.
+* 48923ec : Version 2 of CustomerFactoryTestsNew and working on CustomerTestsNew
+* cb45df0 : Version 2 of CustomerFactoryTestsNew and working on CustomerTestsNew
+* 9947d68 : Version 1 of CustomerFactoryTestsNew
+* 192def3 : Issues with for loops. Upload before working further.
+* 4381144 : Completed Restaurant Package
+* a1147de : Some small tweaks. Starting Unit Test for CustomerFactoryTestsNew
+* ff5c90f : Finished Custoemr Factory, PizzaFactory and Pizza.
+* f937686 : Minor fixes.
+* c3bd6d3 : Worked on Pizza and stopped at ENUMs PizzaToppings.
+* ab6f6f3 : Prepared Factory methods for Pizza and Customers.
+* e8ad462 : Fixed customer files.
+* 9bed9ea : Fixed Pizza with correct price values and LocalTime ordertime exceptions in pizza files.
+* 5aad273 : Added assignment task sheet v1.4.
+* 8e4adf6 : Worked on sub. extended classes for Customer and Pizza.
+* 0b53ddb : Push properly.
+* d039415 : Further work. Added author name. Worked on pizza.
+* 11f3bb0 : Customer worked on.
+* 7dbe904 : Fixed typos
+* 6c318c6 : Changed PizzaResturant.processLog to say 'true if the file was process correctly'
+* d209e25 : Updating log files to remove empty final line
+* 434d3ad : .
+* f748592 : .
+* dfba347 : .
+* e951c1e : .commit da9fb0e5bbce368ecbd2e875f75238927e0bc5d4
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 15:05:08 2017 +1000
+
+    Fixed calculateCostPerPizza javadoc error
+
+commit f520929c62fea07015dd86bd8500da4ca06ee76c
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 14:55:43 2017 +1000
+
+    Tweaked files for javadoc creation
+
+commit 0c7777cd29db8a4b7e6ae207f3ede1ac25855bc9
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 14:35:15 2017 +1000
+
+    Tweaked some files ~ Stash.
+
+commit 017345537bce85dc56db6423d12c5cacb6b37d0a
+Merge: c76e576 d3c817c
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 14:32:34 2017 +1000
+
+    Merge branch 'master' of https://github.com/Starwolf-001/CAB302_Assignment_2
+
+commit c76e5761cffe7ca40d4901066940a2102f2f8fac
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 14:32:05 2017 +1000
+
+    Tweaked some files ~ Stash.
+
+commit 359f290b7828b5265a2fc61d6ca3fcd74a0f0732
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 14:30:11 2017 +1000
+
+    Tweaked some files.
+
+commit d3c817c4e394732c8105a44f70a59dbc98e4091e
+Author: Mataio2 <mattyboy5555@gmail.com>
+Date:   Fri Jun 2 13:53:33 2017 +1000
+
+    Added Repository Log
+
+commit ad6dbc09a2297294bf1276881e94dd28b99c22bf
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 13:48:45 2017 +1000
+
+    Version 1.2 of asgn2. Added 'Order' to text in Pizza categories in GUI.
+
+commit efbd6ef72ce40c7e77610979c4f5a461fcf08b55
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 13:41:29 2017 +1000
+
+    Version 1.1 of asgn2. Fixed bug in GUI.
+
+commit 65901a525420ada963ac416099f78afb22e94ce5
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 12:26:27 2017 +1000
+
+    Fixed RestaurantPizzaTests.java. Version 1 of asgn2.
+
+commit e945a020a675c8875c945805fcd959e1665d5702
+Author: Mataio2 <mattyboy5555@gmail.com>
+Date:   Fri Jun 2 11:58:10 2017 +1000
+
+    Copied Tests over to RestaurantPizzaTests. Removed Tests New
+
+commit acb0f097e2beec6f8e5c16354fdc4550f3b3c6eb
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Fri Jun 2 11:57:30 2017 +1000
+
+    Version 1 of GUI.
+
+commit 34106b416214928113b21d03b773848c9f75cb5f
+Author: Mataio2 <mattyboy5555@gmail.com>
+Date:   Fri Jun 2 03:22:25 2017 +1000
+
+    Nearly finished RestaurantPizzaTests
+    
+    I don't know how to do the orderTime/deliveryTime because those are
+    LocalTime variables. Will figure out tomorrow morning.
+
+commit 886941670af96ab7616c74cc3a4bdeaaaa36bd6a
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 22:49:00 2017 +1000
+
+    Actually added RestaurantPizzaTestsNew.
+
+commit e80455b591641ee504c63a8440c43926fdc5ab08
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 22:37:47 2017 +1000
+
+    Preparing GUI overhaul. Added RestaurantPizzaTestsNew.
+
+commit 4ef138e6383a43f5a1b4f435847203fbc6e6fa48
+Author: Mataio2 <mattyboy5555@gmail.com>
+Date:   Thu Jun 1 20:50:43 2017 +1000
+
+    Add some test data to make it work
+
+commit 072e4e840bb67e3c7cc2d97a0d6dd2d6a3c92a4b
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 21:40:28 2017 +1000
+
+    More minor changes.
+
+commit 0d278351aaf90ac1fa8221f19e11c633e48afc1d
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 21:15:05 2017 +1000
+
+    Updated LogHandlerPizzaTests and removed LogHandlerPizzaTestsNew.
+
+commit 8f129a6e6a6e85b5ba92762b9a67148fa0cae686
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 21:12:51 2017 +1000
+
+    Version 1 of LogHandlerPizzaTestsNew. Some minor Tweaks. Also pulled Matthew's GUI bnefore this commit and notice changes to src/asgn2Restaurant/PizzaRestaurant.
+
+commit 46794a7161310a0ee02f8ab7c8dee3602d60b26c
+Author: Mataio2 <mattyboy5555@gmail.com>
+Date:   Thu Jun 1 20:31:09 2017 +1000
+
+    GUI and static classes
+    
+    Gotten Most of the GUI completed. Sitll having problems with imputing
+    data. Also changed some classes and methods to static for GUI to work.
+
+commit 1ea5564e61dbea775a0e52599db306a750ff848b
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 19:52:14 2017 +1000
+
+    Updated PizzaTests and removed PizzaTestsNew.
+
+commit 3c0249dee2fd7ac003ad0d9bcbf51348f08e3d9b
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 19:00:47 2017 +1000
+
+    Version 1 of PizzaTestsNew and a few tweaks to pizza.
+
+commit ceba1474419a570637494b6dc37ecdd525f32b98
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 15:48:32 2017 +1000
+
+    Updated PizzaFactoryTests and removed PizzaFactoryTestsNew.
+
+commit d26e790c31260543e8937443d9e1820c11dba70a
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 15:43:48 2017 +1000
+
+    Version 1 of PizzaFactoryTestsNew. Some small tweaks to Pizza and the three types of pizza.
+
+commit 83b18ab973f17f48375e1a63826af53f6e4e1a4b
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 13:55:41 2017 +1000
+
+    Updated official test files and removed New test files for customer based testing.
+
+commit 2454d198cf419574077bb0a67a27bcd3e070e127
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu Jun 1 05:00:53 2017 +1000
+
+    Version 1 of RestaurantCustomerTestsNew created. Tweaks made to a few files.
+
+commit 5e558f53d0467ccc46246abef862c99a7060fcd1
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Wed May 31 22:55:56 2017 +1000
+
+    Working on RestaurantCustomerTests. Plus a few tweaks.
+
+commit 3dfab4116b7cb4efb3a0d57b89832d7a0a43d108
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Wed May 31 20:16:50 2017 +1000
+
+    Version 1 of LogHandlerCustomerTestsNew. Created new log files for testing purposes.
+
+commit e9f260cc1d0ddfd1a5e25590762217471b8e3fd8
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Wed May 31 18:27:04 2017 +1000
+
+    Removed second number must be a '4' for mobileNumbers. Added characters ' and - to be used in people's names. Placed in assumptions for what characters are actually valid for customerName.
+
+commit 34be8059def670d5cdf6671ef85e2ff524c1364c
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Wed May 31 17:16:31 2017 +1000
+
+    Fixed PizzaFactory.java for future testing purposes.
+
+commit 728c300676b411d5225858f86567288956367192
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Wed May 31 17:12:22 2017 +1000
+
+    Working on LogHandlerTests. Fixed LogHandler.java failure to read lines. Fixed CustomerFactory so that CVV read values DO equal the values of customerCodes.
+
+commit ea39750ff1ec5d88ab29208fa56c0d2673429a09
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Tue May 30 16:33:01 2017 +1000
+
+    Added Matthew Pike's name to files he is the author of. Preparing LogHandlerCustomerTests and RestaurantCustomerTests
+
+commit 122410a8282c84768e0c3bc00ba7e9bec0d1ba44
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Tue May 30 03:04:23 2017 +1000
+
+    Place instructions in CustomerFactoryTests and CustomerTests
+
+commit 3bf4e297d5ab8d9357c74ad80c869cde7d3f659d
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Tue May 30 02:56:14 2017 +1000
+
+    Version 1 of CustomerTestsNew
+
+commit 4ec489c704b31fd37b8b3303d3ced3e46e2b334e
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Tue May 30 02:30:34 2017 +1000
+
+    Version 3 of CustomerFactoryTestsNew and working on CustomerTestsNew. Fixed euclidean distance.
+
+commit 48923ecd0301fe98bbb5b171fbe03c03df6c15cb
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Mon May 29 23:16:48 2017 +1000
+
+    Version 2 of CustomerFactoryTestsNew and working on CustomerTestsNew
+
+commit cb45df0a55b03e5fd4a1422fcb1ad58c9e5d3bf6
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Mon May 29 23:16:43 2017 +1000
+
+    Version 2 of CustomerFactoryTestsNew and working on CustomerTestsNew
+
+commit 9947d686208deddc239fd550118124c10237ba2b
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Mon May 29 20:20:09 2017 +1000
+
+    Version 1 of CustomerFactoryTestsNew
+
+commit 192def305ce7e20df8264b6f514d63253ad227d2
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Mon May 29 19:32:08 2017 +1000
+
+    Issues with for loops. Upload before working further.
+
+commit 4381144f47e3dc47ddf59a58a3d3702a2a148aac
+Author: Mataio2 <mattyboy5555@gmail.com>
+Date:   Mon May 29 16:56:34 2017 +1000
+
+    Completed Restaurant Package
+    
+    Finished implementing LogHandler and PizzaRestaurant.
+
+commit a1147decfb66bf797f2072a7294ec1b908984fee
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Mon May 29 17:31:34 2017 +1000
+
+    Some small tweaks. Starting Unit Test for CustomerFactoryTestsNew
+
+commit ff5c90fc531e70fdcc818a25cca4834dedd74797
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu May 25 16:01:40 2017 +1000
+
+    Finished Custoemr Factory, PizzaFactory and Pizza.
+
+commit f937686c9e08766e076bed2b77bc08448123fe0b
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Thu May 25 01:24:57 2017 +1000
+
+    Minor fixes.
+
+commit c3bd6d3278cd0a9b23f364cc44ba0c08b21c0d19
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Wed May 24 01:36:52 2017 +1000
+
+    Worked on Pizza and stopped at ENUMs PizzaToppings.
+
+commit ab6f6f3dd6258eb63d1795fbaa611b9b9859f88e
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Tue May 23 18:39:39 2017 +1000
+
+    Prepared Factory methods for Pizza and Customers.
+
+commit e8ad46297df899a06c3741f5215601b271d95586
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Mon May 22 17:55:17 2017 +1000
+
+    Fixed customer files.
+
+commit 9bed9ea7ac50a9b633d9791bf0d3c41cdeb54ff7
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Mon May 22 14:35:46 2017 +1000
+
+    Fixed Pizza with correct price values and LocalTime ordertime exceptions in pizza files.
+
+commit 5aad273b06b3df4c1f3308e77f6b44acdba54415
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Wed May 17 19:06:47 2017 +1000
+
+    Added assignment task sheet v1.4.
+
+commit 8e4adf637362c3bd330a7210c1cda8b25dd64f34
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Tue May 16 21:08:54 2017 +1000
+
+    Worked on sub. extended classes for Customer and Pizza.
+
+commit 0b53ddbc5cd8c648a4cef0c3a334c8c8b2f0a269
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Tue May 16 19:41:03 2017 +1000
+
+    Push properly.
+
+commit d0394157c05aed643513fd00d435c1a719312e4d
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Tue May 16 16:58:45 2017 +1000
+
+    Further work. Added author name. Worked on pizza.
+
+commit 11f3bb0bf46159285d9a5132215767bbf93c57a6
+Author: Starwolf-001 <the.Starwolf.001@gmail.com>
+Date:   Mon May 15 11:50:25 2017 +1000
+
+    Customer worked on.
+
+commit 7dbe90423b6813ca34e96d1fe9842db7ba03687c
+Author: alan <awoodley@qut.edu.au>
+Date:   Fri May 5 17:04:42 2017 +1000
+
+    Fixed typos
+
+commit 6c318c6355efac47ebaa1b4fbebad97b232c2e2e
+Author: alan <awoodley@qut.edu.au>
+Date:   Fri May 5 17:02:09 2017 +1000
+
+    Changed PizzaResturant.processLog to say 'true if the file was process correctly'
+
+commit d209e252f0d37ea6593fdbaf85b7eeb820a79667
+Author: alan <awoodley@qut.edu.au>
+Date:   Fri May 5 16:52:17 2017 +1000
+
+    Updating log files to remove empty final line
+
+commit 434d3ada012f0e03d37b9527d8f9bdff01ca572b
+Author: alan <awoodley@qut.edu.au>
+Date:   Tue Apr 25 18:36:28 2017 +1000
+
+    .
+
+commit f748592b2f1fe58edc493dfacce042ef85c91244
+Author: alan <awoodley@qut.edu.au>
+Date:   Tue Apr 25 18:05:34 2017 +1000
+
+    .
+
+commit dfba34718a2fd75e1bc3721b8770c7466003ab56
+Author: alan <awoodley@qut.edu.au>
+Date:   Tue Apr 25 18:04:54 2017 +1000
+
+    .
+
+commit e951c1e8b6ea69b11df52b6f3f175173c920375e
+Author: awoodley <a.woodley@qut.edu.au>
+Date:   Tue Apr 25 06:32:36 2017 +0000
+
+    .
