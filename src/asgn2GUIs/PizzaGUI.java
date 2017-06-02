@@ -187,6 +187,8 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 	Boolean infoLoaded = false;
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		displayPizzas.setText("");
+		displayCustomers.setText("");
 		// Gets the event source
 		Object src = e.getSource(); 
   		// Source of loading the Log file from button btnLoadFile
@@ -202,7 +204,7 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 				try {
 					restaurant.processLog(filename);
 					infoLoaded = true;
-					displayCustomers.setText(filename + " Loaded");
+					displayCustomers.setText(filename + " has loaded");
 				} catch (CustomerException | PizzaException | LogHandlerException e1) {
 					JOptionPane.showMessageDialog(this,"The file: " + filename + " failed to load due to" + "\n" + 
 				                                  e1.toString(),"File failed to load",JOptionPane.ERROR_MESSAGE);
@@ -212,6 +214,8 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 		// Source of displaying displayPizzas and displayCustomers from button btnDisplayData but only when the data
 		// has been loaded
 		} else if (src == btnDisplayData && infoLoaded) {
+			displayPizzas.setText("");
+			displayCustomers.setText("");
 			displayPizzas.setText(String.format("   Pizza\n%-3s %-12s %-4s %-6s %-6s %-6s", " | ", "Type", "Qty", "Price", "Cost", 
 					                            "Profit\n"));
 			displayCustomers.setText(String.format("Customers\n%-19s %-11s %-16s %-6s %-6s %-5s", "Name", "Mobile", 
@@ -246,6 +250,8 @@ public class PizzaGUI extends javax.swing.JFrame implements Runnable, ActionList
 		// Source of displaying total profit and total distance traveled from button btnDisplayResult but only when the
 		// data has been loaded
 		} else if (src == btnDisplayResult && infoLoaded) {
+			displayPizzas.setText("");
+			displayCustomers.setText("");
 			displayPizzas.setText(String.format("Total Profit: $%.2f", restaurant.getTotalProfit()));
 			displayCustomers.setText(String.format("Total Delivery Distance: %.2f" + "km", 
 					                 restaurant.getTotalDeliveryDistance()));
