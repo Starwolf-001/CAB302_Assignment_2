@@ -213,7 +213,7 @@ public class PizzaTests {
 
 	/**
 	 * Test method for calculateCostPerPizza
-	 * {@link asgn2Pizzas.Pizza#calculateCostPerPizza()}.
+	 * {@link asgn2Pizzas.Pizza#calculateCostPerPizza(asgn2Pizzas.PizzaTopping[])}.
 	 * @throws PizzaException if pizza details do not meet or fail the the pizza specifications 
 	 */
 	
